@@ -33,11 +33,25 @@ if [[ $- == *i* ]]; then
 fi
 
 # 6. Show message
-echo -e "init-esphome has been installed to $SCRIPT_PATH\n"
-echo -e "Installation complete. You can now run 'init-esphome' anywhere,"
-echo -e "to download and configure the ESPHome development environment,"
-echo -e "placing it within the specified target folder.\n"
-echo -e "Usage: init-esphome <target-folder>\n"
+
+# Define some colors and styles
+BOLD='\033[1m'
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Decorative separator
+SEPARATOR="${CYAN}================================================================================${NC}"
+
+echo -e "\n$SEPARATOR"
+echo -e "${GREEN}${BOLD}init-esphome has been installed to ${SCRIPT_PATH}${NC}\n"
+
+echo -e "${BOLD}Installation is complete.${NC} You can now run ${CYAN}'init-esphome'${NC} from any location," 
+echo -e "to download and set up an ESPHome development environment in any chosen"
+echo -e "target folder.\n"
+
+echo -e "${BOLD}Usage:${NC} ${CYAN}init-esphome <target-folder>${NC}"
+echo -e "$SEPARATOR\n"
 
 
 
