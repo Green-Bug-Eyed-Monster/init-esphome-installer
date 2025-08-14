@@ -33,11 +33,11 @@ if [[ $- == *i* ]]; then
 fi
 
 # 6. Show message
-echo "init-esphome has been installed to $SCRIPT_PATH\n"
-echo "Installation complete. You can now run 'init-esphome' anywhere,"
-echo "to download and configure the ESPHome development environment,"
-echo "placing it within the specified target folder."
-echo "Usage: init-esphome <target-folder>"
+echo -e "init-esphome has been installed to $SCRIPT_PATH\n"
+echo -e "Installation complete. You can now run 'init-esphome' anywhere,"
+echo -e "to download and configure the ESPHome development environment,"
+echo -e "placing it within the specified target folder.\n"
+echo -e "Usage: init-esphome <target-folder>\n"
 
 
 
