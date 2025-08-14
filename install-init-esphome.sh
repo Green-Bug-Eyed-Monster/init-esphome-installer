@@ -43,7 +43,7 @@ NC='\033[0m' # No Color
 # Decorative separator
 SEPARATOR="${CYAN}================================================================================${NC}"
 
-echo -e "\n$SEPARATOR"
+echo -e "\n$SEPARATOR\n"
 echo -e "${GREEN}${BOLD}init-esphome has been installed to ${SCRIPT_PATH}${NC}\n"
 
 echo -e "${BOLD}Installation is complete.${NC} You can now run ${CYAN}'init-esphome'${NC} from any location," 
@@ -51,7 +51,7 @@ echo -e "to download and set up an ESPHome development environment in any chosen
 echo -e "target folder.\n"
 
 echo -e "${BOLD}Usage:${NC} ${CYAN}init-esphome <target-folder>${NC}"
-echo -e "$SEPARATOR\n"
+echo -e "\n$SEPARATOR\n"
 
 
 
