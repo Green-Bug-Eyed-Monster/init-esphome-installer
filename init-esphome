@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# init-esphome command that builds an ESPHome development environment
+
+# Copyright © 2025, green@bug-eyed.monster
+# License: MIT
+
 # Exit on any error
 set -e
 
