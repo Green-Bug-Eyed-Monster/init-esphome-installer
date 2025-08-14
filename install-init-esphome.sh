@@ -5,7 +5,7 @@
 # Copyright © 2025, green@bug-eyed.monster
 # License: MIT
 
-# curl -fsSL https://green.bug-eyed.monster/install-init-esphome.sh | bash
+# curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 
 FOLDER="$HOME/.local/bin"
 SCRIPT_URL="https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/init-esphome"
