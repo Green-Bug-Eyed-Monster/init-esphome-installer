@@ -36,8 +36,8 @@ fi
 echo "init-esphome has been installed to $SCRIPT_PATH\n"
 echo "Installation complete. You can now run 'init-esphome' anywhere,"
 echo "to download and configure the ESPHome development environment,"
-echo "placing it within the specified target folder.\n"
-echo "Usage: init-esphome <target-folder>\n"
+echo "placing it within the specified target folder."
+echo "Usage: init-esphome <target-folder>"
 
 
 
