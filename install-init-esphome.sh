@@ -8,7 +8,7 @@
 # curl -fsSL https://green.bug-eyed.monster/install-init-esphome.sh | bash
 
 FOLDER="$HOME/.local/bin"
-SCRIPT_URL="https://green.bug-eyed.monster/init-esphome"
+SCRIPT_URL="https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/init-esphome"
 SCRIPT_PATH="$FOLDER/init-esphome"
 
 # 1. Create the folder if it doesn't exist
