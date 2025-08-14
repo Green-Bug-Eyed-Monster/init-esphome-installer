@@ -1,0 +1,608 @@
+#!/bin/bash
+
+# Exit on any error
+set -e
+
+# Get the target folder from the first argument
+TARGET_DIR="$1"
+
+# Check if the user provided a folder
+if [ -z "$TARGET_DIR" ]; then
+  echo "Usage: $0 <target-folder>"
+  exit 1
+fi
+
+# Create the folder if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+# Change into the folder
+cd "$TARGET_DIR"
+
+echo "Initializing ESPHome environment in: $TARGET_DIR"
+
+# Create subfolders
+mkdir -p documents icons hardware common PlatformIO
+
+# Set up Python virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install ESPHome and dependencies
+pip3 install esphome
+pip install tornado esptool
+
+deactivate
+
+# Prompt for Git init
+read -p "Do you want to initialize a Git repository in '$TARGET_DIR'? (y/n): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+  git init
+  echo "Git repository initialized."
+else
+  echo "Git repository not initialized."
+fi
+
+# Create Visual Studio Code configuration folder
+
+mkdir -p .vscode
+
+# Write task configuration to tasks.json
+
+cat > .vscode/tasks.json <<'EOF'
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run ESPHome Configuration",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && echo '2' | esphome run ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+        {
+      "label": "Bootstrap ESPHome Configuration",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && echo '1' | esphome run ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Project Source",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Validate ESPHome Configuration",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && mkdir -p .esphome/build/${fileBasenameNoExtension} && esphome config ${file} | tee .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && code .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && deactivate"      ],
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Build Configuration Binary",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && esphome compile ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Upload Configuration Binary",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && esphome upload ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean Configuration Build",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && esphome clean ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Open PlatformIO Project",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "cp -r .esphome/build/${fileBasenameNoExtension} ./PlatformIO/ && cp ${file} ./PlatformIO/${fileBasenameNoExtension}/${fileBasename}.bak && code ./PlatformIO/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Bring-up ESPHome Device Builder Dashboard",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "(xdg-open http://127.0.0.1:6052 &) && source ./venv/bin/activate && esphome dashboard . && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Cleanup MQTT Topics",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Upgrade ESPHome Version",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source ./venv/bin/activate && pip install --upgrade esphome && deactivate"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "ESPHome Wizard",
+      "type": "shell",
+      "command": ".vscode/run_esphome_wizard.sh",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+  ]
+}
+EOF
+
+echo ".vscode/tasks.json written."
+
+    
+# Write task button configuration to settings.json
+
+cat > .vscode/settings.json <<'EOF'
+{
+  "VsCodeTaskButtons.showCounter": true,
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(check) Validate",
+      "task": "Validate ESPHome Configuration",
+      "tooltip": "Validate ESPHome Configuration"
+    },
+    {
+      "label": "$(plug) Bootstrap",
+      "task": "Bootstrap ESPHome Configuration",
+      "tooltip": "Bootstrap ESPHome Configuration"
+    },
+    {
+      "label": "$(broadcast) Run",
+      "task": "Run ESPHome Configuration",
+      "tooltip": "Run ESPHome Configuration"
+    },
+    {
+      "label": "$(default-view-icon) Dashboard",
+      "task": "Bring-up ESPHome Device Builder Dashboard",
+      "tooltip": "Bring-up ESPHome Device Builder Dashboard"
+    },
+    {
+      "label": "$(more) ESPHome",
+      "tasks": [
+        {
+          "label": "$(plus) Wizard",
+          "task": "ESPHome Wizard",
+          "tooltip": "ESPHome Wizard"
+        },
+
+        {
+          "label": "$(plug) Bootstrap",
+          "task": "Bootstrap ESPHome Configuration",
+          "tooltip": "Bootstrap ESPHome Configuration"
+        },
+
+        {
+          "label": "$(broadcast) Run",
+          "task": "Run ESPHome Configuration",
+          "tooltip": "Run ESPHome Configuration"
+        },
+
+        {
+          "label": "$(wrench) Build",
+          "task": "Build Configuration Binary",
+          "tooltip": "Build Configuration Binary"
+        },
+
+        {
+          "label": "$(rss) Upload",
+          "task": "Upload Configuration Binary",
+          "tooltip": "BUpload Configuration Binary"
+        },
+        {
+          "label": "$(trash) Clean",
+          "task": "Clean Configuration Build",
+          "tooltip": "Clean Configuration Build"
+        },
+        {
+          "label": "$(trash) Clean-Up MQTT",
+          "task": "Cleanup MQTT Topics",
+          "tooltip": "Cleanup MQTT Topics"
+        },
+        {
+          "label": "$(search-refresh) Upgrade ESPHome",
+          "task": "Upgrade ESPHome Version",
+          "tooltip": "Upgrade ESPHome Version"
+        }
+      ],
+      "tooltip": "ESPHome Commands"
+    },
+    {
+      "label": "$(more) Platformio",
+      "tasks": [
+        {
+          "label": "$(empty-window) Generate Project",
+          "task": "Generate Project Source",
+          "description": "Generate Platformio Source"
+        },
+        {
+          "label": "$(pencil) Open Project",
+          "task": "Open PlatformIO Project",
+          "description": "Open PlatformIO Project"
+        }
+      ],
+      "tooltip": "Platformiop Commands"
+    } 
+  ],
+}
+EOF
+
+echo ".vscode/settings.json written."
+
+
+
+# Write shell script to settings.json
+
+cat > .vscode/run_esphome_wizard.sh <<'EOF'
+#!/usr/bin/env bash
+
+# There are inadequacies in the way task initiated environments inherit inputs.
+
+# Flush any existing stdin to prevent accidental input
+while read -t 0.1 -r discard; do :; done
+
+# Clear the screen
+clear
+
+# Prompt user for filename safely, from actual terminal
+read -p "Enter the YAML filename to create (e.g., example.yaml): " configFile < /dev/tty
+
+# Check extension
+if [[ "$configFile" != *.yaml && "$configFile" != *.yml ]]; then
+  echo "Error: Filename must end in .yaml or .yml"
+  exit 1
+fi
+
+# Activate venv and run
+source ./venv/bin/activate
+esphome wizard "$configFile"
+code "$configFile"
+EOF
+
+chmod +x .vscode/run_esphome_wizard.sh
+
+echo ".vscode/run_esphome_wizard.sh written."
+
+
+
+# Write to boiler-plate.yaml
+
+cat > boiler-plate.yaml <<'EOF'
+# ===================================================================
+# ESPHome Boilerplate Configuration
+#
+# This file serves as a starting template for new ESPHome projects.
+# It includes common configurations needed for most devices.
+#
+# How to use this file:
+# 1. Copy this file to a new name (e.g., my_device.yaml).
+# 2. Update the 'substitutions' section with your device-specific details.
+# 3. Fill in your credentials in a 'secrets.yaml' file (a secrets.form.yaml is provided as a template).
+# 4. Add your device's specific components (sensors, switches, etc.) at the end.
+# ===================================================================
+
+substitutions:
+  # --- Device-specific variables ---
+  # These values are used to easily configure the device without changing the main configuration.
+  # They are referenced elsewhere in this file using '$variable_name'.
+
+  # A unique name for your device. Used for the Wi-Fi hostname (e.g., 'boiler-plate.local'),
+  # the ESPHome API identifier, and by default, the entity IDs in Home Assistant.
+  # Should be lowercase and contain only a-z, 0-9, and hyphens.
+  device_name: boiler-plate
+
+  # A human-readable name for the device. This is what you'll see in the Home Assistant UI.
+  device_friendly_name: "Boilerplate App"
+
+  # This section specifies the microcontroller architectural platform.
+  # Replace '<your_platform>' with your board's architecture, 
+  # e.g., esp32, esp8266, bk72xx, ln882x, rtl87xx, rp2040, etc.
+  platform: <your_platform>
+
+  # The board you are using. This tells ESPHome how to compile the firmware.
+  # Replace '<your_device_board>' with your actual board, e.g., 'nodemcuv2', 'd1_mini', 'esp32dev'.
+  # A list of supported boards can be found at: https://esphome.io/components/esp8266.html or https://esphome.io/components/esp32.html
+  device_board: <your_device_board>
+
+
+# ===================================================================
+# Reusable Configuration with Packages
+#
+# This section demonstrates how to include common configuration settings
+# from another file. This is the recommended way to keep your device-
+# specific files clean and to reuse code across multiple devices.
+# ===================================================================
+
+# --- Why `packages` is used instead of a simple `!include` ---
+# The standard YAML merge `<<: !include ...` is a simple text inclusion.
+# It fails if both this file and the included file define the same
+# top-level key (like 'api:' or 'logger:').
+#
+# The `packages` feature is ESPHome's powerful solution. It intelligently
+# merges configurations. For example, if this file defines an `api:` service
+# and the included file also defines an `api:` block, `packages` will combine
+# them correctly instead of causing an error.
+packages:
+  # This line includes all the base configuration (Wi-Fi, API, OTA, logger, etc.)
+  # from the 'testing-config.yaml' file located in the 'common/' directory.
+  base: !include common/testing-config.yaml
+
+
+# ===================================================================
+# Add your device-specific components below this line.
+# For example: sensor, switch, light, etc.
+#
+# Example sensor:
+# sensor:
+#   - platform: dht
+#     pin: D2
+#     model: DHT22
+#     temperature:
+#       name: "Living Room Temperature"
+#     humidity:
+#       name: "Living Room Humidity"
+#     update_interval: 60s
+#
+# ===================================================================
+
+EOF
+
+echo "boiler-plate.yaml written."
+
+
+
+# Write to secrets-form.yaml
+
+cat > secrets-form.yaml <<'EOF'
+# ===================================================================
+# ESPHome Secrets Template
+#
+# This file is a template for your 'secrets.yaml' file. It allows you
+# to store sensitive information (like passwords and keys) separately
+# from your main configuration files.
+#
+# How to use this file:
+# 1. Make a copy of this file and rename it to 'secrets.yaml'.
+#    It should be in the same directory as your ESPHome YAML files.
+# 2. Replace the placeholder values (e.g., "<wifi_network_name>") with your
+#    actual credentials and settings.
+# 3. **IMPORTANT**: Do NOT commit your 'secrets.yaml' file to public
+#    version control systems like GitHub. Add 'secrets.yaml' to your
+#    .gitignore file to prevent accidentally sharing your credentials.
+#
+# The '!secret' tag in your main YAML files (e.g., boiler-plate.yaml)
+# tells ESPHome to look for the corresponding key in this file.
+# ===================================================================
+
+# --- Wi-Fi Network Credentials ---
+# The SSID (name) of your Wi-Fi network.
+wifi_ssid: "<wifi_network_name>"
+# The password for your Wi-Fi network.
+wifi_password: "<wifi_password>"
+
+# --- Fallback Hotspot (Captive Portal) ---
+# If the device cannot connect to your Wi-Fi, it will create a temporary
+# Access Point (AP). This is the password for that AP.
+# It must be at least 8 characters long.
+fallback_hotspot_password: "<simple_hotspot_password>"
+
+# --- Over-The-Air (OTA) Update Password ---
+# A password to secure wireless firmware updates.
+# This is HIGHLY RECOMMENDED to prevent unauthorized access to your device.
+# Choose a strong, unique password.
+ota_password: "<a_strong_ota_password>"
+
+# --- Native Home Assistant API (Optional but Recommended) ---
+# An encryption key for secure communication with the Home Assistant API.
+# This adds a significant layer of security.
+# You can generate a key using the command: openssl rand -base64 32
+# To use this, uncomment the 'encryption' section in your device's YAML file.
+api_encryption_key: "<paste_your_generated_api_key_here>"
+
+# --- MQTT Broker Connection Details (Optional) ---
+# These are only needed if you are using the MQTT component.
+# The hostname or IP address of your MQTT broker (e.g., "192.168.1.100" or "homeassistant.local").
+mqtt_broker: "<mqtt_broker_hostname>"
+# The username for your MQTT broker.
+mqtt_username: "<mqtt_broker_username>"
+# The password for your MQTT broker.
+mqtt_password: "<mqtt_broker_password>"
+
+EOF
+
+echo "secrets-form.yaml written."
+
+
+
+# Write to common/testing-config.yaml
+
+cat > common/testing-config.yaml <<'EOF'
+
+# ===================================================================
+# Core ESPHome Configuration
+# ===================================================================
+esphome:
+  # The 'name' is the network hostname and the base for entity IDs.
+  name: $device_name
+  # The 'friendly_name' is for display purposes in Home Assistant.
+  friendly_name: $device_friendly_name
+  # You can also add comments to your device configuration in Home Assistant.
+  # comment: "This is a boilerplate ESPHome device."
+
+# ===================================================================
+# Hardware Platform Configuration
+# ===================================================================
+# This section specifies the microcontroller platform and board.
+# Supported platforms include: esp32, esp8266, rp2040, bk72xx, etc.
+$platform:
+  board: $device_board
+
+# ===================================================================
+# Logging Configuration
+# ===================================================================
+# The logger component prints log messages from the device.
+# Useful for debugging. You can view logs via USB or the web server.
+logger:
+  # Log level can be set to DEBUG, INFO, WARN, ERROR, or VERBOSE.
+  # level: DEBUG
+  # To disable logging over the serial port (UART), set baud_rate to 0.
+  # This can be necessary if you need to use the UART pins for other components.
+  # baud_rate: 0
+
+# ===================================================================
+# Native API for Home Assistant
+# ===================================================================
+# The API component enables direct, efficient communication with Home Assistant.
+# It's the recommended way to integrate ESPHome with Home Assistant.
+api:
+  # For enhanced security, you can encrypt the API communication.
+  # The key should be a base64-encoded 32-byte key.
+  # You can generate one with: openssl rand -base64 32
+  # Store the key in your 'secrets.yaml' file.
+  # encryption:
+  #   key: !secret api_encryption_key
+
+# ===================================================================
+# Over-The-Air (OTA) Updates
+# ===================================================================
+# OTA allows you to update the device's firmware wirelessly.
+ota:
+  - platform: esphome
+    # A password is highly recommended to secure OTA updates.
+    # Store it in your 'secrets.yaml' file.
+    password: !secret ota_password
+
+# ===================================================================
+# Wi-Fi Configuration
+# ===================================================================
+wifi:
+  # Your Wi-Fi network credentials.
+  # It's best practice to store these in a 'secrets.yaml' file.
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # --- Fallback Access Point (AP) ---
+  # If the device can't connect to the configured Wi-Fi, it will create its own
+  # Wi-Fi network (Access Point) that you can connect to for troubleshooting.
+  ap:
+    ssid: "$device_name Hotspot"
+    password: !secret fallback_hotspot_password
+
+# ===================================================================
+# Captive Portal
+# ===================================================================
+# When the fallback AP is active, the captive portal provides a simple web
+# page to manually configure Wi-Fi credentials.
+captive_portal:
+
+# ===================================================================
+# Web Server
+# ===================================================================
+# The web_server component starts a web server on the device.
+# You can access it via http://<device_name>.local to view logs,
+# restart the device, and interact with its components.
+web_server:
+  # You can set a port (default is 80).
+  # port: 80
+  # You can also secure it with a username and password.
+  # username: "admin"
+  # password: "your_password"
+
+# ===================================================================
+# MQTT (Message Queuing Telemetry Transport)
+# ===================================================================
+# MQTT is a lightweight messaging protocol for IoT devices.
+# It can be used as an alternative or in addition to the native API.
+# It's useful for integrating with systems other than Home Assistant.
+mqtt:
+  broker: !secret mqtt_broker
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  # You can customize the topic prefix for MQTT messages.
+  # topic_prefix: "esphome/$device_name"
+EOF
+
+echo "common/testing-config.yaml written."
+
+
+
+# Write to .vscode/extensions.json
+
+cat > .vscode/extensions.json <<'EOF'
+// VS Code allows comments in *.json files using a relaxed JSON format called JSON with Comments (jsonc).
+// Were this file processed with a strict JSON parser it would fail, yet VS Code's jsonc parser allows the comments.
+{
+  "recommendations": [
+    "platformio.platformio-ide",   // PlatformIO - Your Gateway to Embedded Software Development Excellence.
+    "esphome.esphome-vscode",      // ESPHome - Continuous validation of ESPHome configuration files.
+                                   //         - Key tootltips for description and documentation links.
+    "spencerwmiles.vscode-task-buttons",
+                                   // Task Buttons - Add your tasks as buttons in the status bar.
+  ],
+  "unwantedRecommendations": [
+    // Optional: block certain extensions from being recommended
+    "somepublisher.bad-extension"
+  ]
+}
+EOF
+
+echo ".vscode/extensions.json written."
+
+
+
+# Open project folder in Visual Studio Code
+
+code  boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
