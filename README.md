@@ -33,7 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 ### Use
 You can then run the init-esphome script from any location, to download and set up an ESPHome development environment in any chosen target folder on Linux. It will create the target folder if it doesn't already exist, then populate it with all the files required. 
 
-**Usage:** init-esphome \<target-folder\>
+**Usage:** `init-esphome <target-folder>`
 
 ---
 
