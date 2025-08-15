@@ -1,7 +1,7 @@
 # init-esphome-installer
 ## Repository for init-esphome command installer and init-esphome command for Debian-style Linux.
 
-The init-esphome script creates project folders, already ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, in a Visual Studio Code environment.
+The init-esphome script creates project folders, ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, in a Visual Studio Code environment.
 
 ### Prerequisites
 
