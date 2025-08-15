@@ -1,11 +1,12 @@
 # init-esphome-installer
-## Repository for init-esphome command installer and init-esphome command for Debian-style Linux.
+## Repository for install-init-esphome.sh command installer and init-esphome command.
 
 The init-esphome script creates project folders, ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, inside a Visual Studio Code environment.
+The install-init-esphome.sh script downloads and installs the init-esphome command, on Debian-style Linux systems.
 
 ### Prerequisites
 
-Check that your Linux distribution has Python3 version 3.10+.
+Check that your Linux distribution has Python3 version 3.10 or later.
 ```
 python --version
   Python 3.10.12  ✓
