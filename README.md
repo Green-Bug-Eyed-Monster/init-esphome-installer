@@ -11,7 +11,7 @@ python --version
   Python 3.10.12  ✓
 ```
 
-Add the repository and install Microsoft Visual Studio Code, if you don't already have it installed.
+If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
 ```
 sudo apt update
 sudo apt install wget gpg -y
