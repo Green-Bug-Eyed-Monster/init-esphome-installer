@@ -1,8 +1,8 @@
 # init-esphome-installer
 ## Repository for the init-esphome command and install-init-esphome.sh command installer.
 
-The init-esphome script creates project folders, ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, inside a Visual Studio Code environment.
-The install-init-esphome.sh script downloads and installs the init-esphome command, on Debian-style Linux systems.
+The `init-esphome` script creates project folders, ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, inside a Visual Studio Code environment.
+The `install-init-esphome.sh` script downloads and installs the `init-esphome` command, on Debian-style Linux systems.
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ sudo apt install code
 ### Installation
 
 
-To install the init-esphome command script in your ~/.local/bin folder, creating the directory and adding it to your path if it doesn't already exist, just run the following shell command.
+To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it doesn't already exist, just run the following shell command.
 ```
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
@@ -35,7 +35,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 > If you have any security concerns, please review the [`install-init-esphome.sh`](./install-init-esphome.sh) installation script, as well as the [`init-esphome`](./init-esphome) development environment creation script itself, before invoking the installer.
 
 ### Use
-After installation, you may then run the init-esphome script from any location, to download and set up an ESPHome development environment, in any chosen target folder on Linux. It will create the target folder if it doesn't already exist, then populate it with all the files required. 
+After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it doesn't already exist, then populate it with all the files required. Any downloaded Visual Studio Code extension suggestion has lasting, global effect, whilst all VS Code customisations are working folder scope. i.e. When the working folder is erased, all customizations are lost.
 
 **Usage:** `init-esphome <target-folder>`
 
