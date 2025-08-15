@@ -31,10 +31,10 @@ To install the init-esphome command script in your ~/.local/bin folder, creating
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
 > [!NOTE]
-> If you have any security concerns, please review the install-init-esphome.sh installation script, as well as the init-esphome development environment creation script itself, before invoking the installer.
-> 
+> If you have any security concerns, please review the [`install-init-esphome.sh`](./install-init-esphome.sh) installation script, as well as the [`init-esphome`](./init-esphome) development environment creation script itself, before invoking the installer.
+
 ### Use
-You can then run the init-esphome script from any location, to download and set up an ESPHome development environment, in any chosen target folder on Linux. It will create the target folder if it doesn't already exist, then populate it with all the files required. 
+After installation, you may then run the init-esphome script from any location, to download and set up an ESPHome development environment, in any chosen target folder on Linux. It will create the target folder if it doesn't already exist, then populate it with all the files required. 
 
 **Usage:** `init-esphome <target-folder>`
 
