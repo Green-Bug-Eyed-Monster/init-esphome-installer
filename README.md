@@ -1,7 +1,7 @@
 # init-esphome-installer
 ## Repository for the init-esphome command and install-init-esphome.sh command installer.
 
-The `init-esphome` script creates project folders, ready set-up to accomplish professional IOT node development, using the ESPHome component software framework, inside a Visual Studio Code environment.
+The `init-esphome` script creates project folders, ready set-up to perform professional IOT node development, using the ESPHome component software framework, inside a tailored Visual Studio Code environment.
 The `install-init-esphome.sh` script downloads and installs the `init-esphome` command, on Debian-style Linux systems.
 
 ### Prerequisites
@@ -35,7 +35,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 > If you have any security concerns, please review the [`install-init-esphome.sh`](./install-init-esphome.sh) installation script, as well as the [`init-esphome`](./init-esphome) development environment creation script itself, before invoking the installer.
 
 ### Use
-After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it doesn't already exist, then populate it with all the files required. Any downloaded Visual Studio Code extension suggestion has lasting, global effect, whilst all VS Code customisations are working folder scope. i.e. When the working folder is erased, all customizations are lost.
+After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it doesn't already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment. Any downloaded Visual Studio Code extension suggestion has lasting, global effect. Conversely, all VS Code customisation is working folder scoped. i.e. When the working folder is erased, all customisation is lost.
 
 **Usage:** `init-esphome <target-folder>`
 
