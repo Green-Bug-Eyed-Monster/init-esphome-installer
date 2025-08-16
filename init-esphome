@@ -834,4 +834,4 @@ echo "documents/README.md written."
 
 # Open project folder in Visual Studio Code
 
-code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml documents/README.md
+code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
