@@ -44,7 +44,7 @@ NC='\033[0m' # No Color
 SEPARATOR="${CYAN}================================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n"
-echo -e "${BLUE}${BOLD}The ${NC}${CYAN}'init-esphome'${NC} ${GREEN}command has been installed to:${NC}\n"
+echo -e "${BLUE}The ${NC}${CYAN}'init-esphome'${NC} ${GREEN}command has been installed to:${NC}\n"
 echo -e "${SCRIPT_PATH}\n"
 
 echo -e "${BOLD}Installation is complete.${NC} You can now run ${GREEN}'init-esphome'${NC} from any location,"
