@@ -297,7 +297,7 @@ cat > .vscode/settings.json <<'EOF'
           "tooltip": "Upgrades the `esphome` package within the project's virtual environment to the latest version available from PyPI."
         },
         {
-          "label": "View README",
+          "label": "Help",
           "task": "Open README File",
           "tooltip": "Open the README.md markdown file"
         },
