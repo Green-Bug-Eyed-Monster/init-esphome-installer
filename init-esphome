@@ -320,9 +320,9 @@ cat > boiler-plate.yaml <<'EOF'
 # It includes common configurations needed for most devices.
 #
 # How to use this file:
-# 1. Copy this file to a new name (e.g., my_device.yaml).
+# 1. Copy this file to a new name (e.g., my-node.yaml).
 # 2. Update the 'substitutions' section with your device-specific details.
-# 3. Fill in your credentials in a 'secrets.yaml' file (a secrets.form.yaml is provided as a template).
+# 3. Fill in your credentials in a 'secrets.yaml' and save it in the root project folder. (a secrets.form.yaml is provided as a template).
 # 4. Add your device's specific components (sensors, switches, etc.) at the end.
 # ===================================================================
 
