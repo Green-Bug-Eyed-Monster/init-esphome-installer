@@ -48,7 +48,7 @@ NC='\033[0m' # No Color
 # Decorative separator
 SEPARATOR="${BRIGHT_YELLOW}================================================================================${NC}"
 
-echo -e "\n$SEPARATOR\n"
+echo -e "\n$SEPARATOR\n\n"
 echo -e " ${BOLD}Installation is complete.${NC}\n"
 echo -e " Your ${LIME_GREEN}init-esphome${NC} command has been installed to:"
 echo -e " ${SCRIPT_PATH}\n"
@@ -60,7 +60,7 @@ echo -e " the ESPHome component software framework, and a tailored Visual Studio
 echo -e " Code environment.\n"
 
 echo -e " ${BOLD}Usage:${NC} ${LIME_GREEN}init-esphome <target-folder>${NC}"
-echo -e "\n  👽"
+echo -e "\n  👽\n"
 echo -e "\n$SEPARATOR\n"
 
 
