@@ -2,7 +2,7 @@
 
 # init-esphome command that builds an ESPHome development environment
 
-# Copyright © 2025, green@bug-eyed.monster
+# Copyright © 2025 Green.Bug-Eyed.Monster
 # License: MIT
 
 # Exit on any error
@@ -69,7 +69,10 @@ mkdir -p .vscode
 # Write task configuration to tasks.json
 
 cat > .vscode/tasks.json <<'EOF'
-{
+{ //
+  // Copyright © 2025 Green.Bug-Eyed.Monster
+  // License: MIT
+  //
   "version": "2.0.0",
   "tasks": [
     {
@@ -207,7 +210,10 @@ echo ".vscode/tasks.json written."
 # Write task button configuration to settings.json
 
 cat > .vscode/settings.json <<'EOF'
-{
+{ //
+  // Copyright © 2025 Green.Bug-Eyed.Monster
+  // License: MIT
+  //
   "VsCodeTaskButtons.showCounter": true,
   "VsCodeTaskButtons.tasks": [
     {
@@ -295,6 +301,9 @@ echo ".vscode/settings.json written."
 
 cat > .vscode/run_esphome_wizard.sh <<'EOF'
 #!/usr/bin/env bash
+
+# Copyright © 2025 Green.Bug-Eyed.Monster
+# License: MIT
 
 # There are inadequacies in the way task initiated environments inherit inputs.
 
@@ -771,6 +780,8 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 3.  Deactivates the virtual environment.
 
 ---
+Copyright © 2025 Green.Bug-Eyed.Monster
+License: MIT
 
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 EOF
