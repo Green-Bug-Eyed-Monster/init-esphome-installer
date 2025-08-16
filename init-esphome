@@ -28,15 +28,6 @@ echo "Initializing ESPHome environment in: $TARGET_DIR"
 # Create subfolders
 mkdir -p documents icons hardware common PlatformIO
 
-# Prompt for Git init
-read -p "Do you want to initialize a Git repository in '$TARGET_DIR'? (y/n): " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
-  git init
-  echo "Git repository initialized."
-else
-  echo "Git repository not initialized."
-fi
-
 # Set up Python virtual environment
 python3 -m venv venv
 source venv/bin/activate
@@ -46,6 +37,30 @@ pip3 install esphome
 pip install tornado esptool
 
 deactivate
+
+
+# Write overwrite .gitignore
+
+cat > .gitignore <<'EOF'
+#
+# Gitignore settings for init-esphome
+# 
+/.esphome/
+/venv/
+/secrets.yaml
+EOF
+
+echo ".gitignore written."
+
+
+# Prompt for Git init
+read -p "Do you want to initialize a Git repository in '$TARGET_DIR'? (y/n): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+  git init
+  echo "Git repository initialized."
+else
+  echo "Git repository not initialized."
+fi
 
 # Create Visual Studio Code configuration folder
 
