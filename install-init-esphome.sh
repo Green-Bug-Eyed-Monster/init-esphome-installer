@@ -44,16 +44,16 @@ NC='\033[0m' # No Color
 SEPARATOR="${CYAN}================================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n"
-echo -e "${GREEN}${BOLD}The ${NC}${CYAN}'init-esphome'${NC} ${GREEN}command has been installed to:${NC}\n"
+echo -e "${BLUE}${BOLD}The ${NC}${CYAN}'init-esphome'${NC} ${GREEN}command has been installed to:${NC}\n"
 echo -e "${SCRIPT_PATH}\n"
 
-echo -e "${BOLD}Installation is complete.${NC} You can now run ${CYAN}'init-esphome'${NC} from any location,"
+echo -e "${BOLD}Installation is complete.${NC} You can now run ${GREEN}'init-esphome'${NC} from any location,"
 echo -e "to create the target folder if it does not already exist, then populate"
 echo -e "it with all the files required to perform professional IOT node development,"
 echo -e "including the ESPHome component software framework, and a tailored"
 echo -e "Visual Studio Code environment.\n"
 
-echo -e "${BOLD}Usage:${NC} ${CYAN}init-esphome <target-folder>${NC}"
+echo -e "${BOLD}Usage:${NC} ${GREEN}init-esphome <target-folder>${NC}"
 echo -e "\n$SEPARATOR\n"
 
 
