@@ -229,22 +229,22 @@ cat > .vscode/settings.json <<'EOF'
     {
       "label": "$(check) Validate",
       "task": "Validate ESPHome Configuration",
-      "tooltip": "Validates the currently focused YAML configuration file.",
+      "tooltip": "Validates the focused YAML configuration file.",
     },
     {
       "label": "$(plug) Bootstrap",
       "task": "Bootstrap ESPHome Configuration",
-      "tooltip": "This button is used for the compiling and initial flashing of a device over a direct USB/serial connection. It also displays the device's logs via USB/serial.",
+      "tooltip": "Compile and initial flashing over USB/serial.",
     },
     {
       "label": "$(broadcast) Run",
       "task": "Run ESPHome Configuration",
-      "tooltip": "This button compiles and uploads the configuration to a device that is already on the network, using an Over-the-Air (OTA) update. It also displays the device's logs via wifi.",
+      "tooltip": "Compile and upload using Over-the-Air (OTA) update.",
     },
     {
       "label": "$(default-view-icon) Dashboard",
       "task": "Bring-up ESPHome Device Builder Dashboard",
-      "tooltip": "This button launches the ESPHome web server dashboard for managing your project files through a browser interface.",
+      "tooltip": "Launch ESPHome Dashboard web server.",
     },
     {
       "label": "$(menu) ESPHome",
@@ -301,11 +301,7 @@ cat > .vscode/settings.json <<'EOF'
           "task": "Upgrade ESPHome Version",
           "tooltip": "Upgrades the `esphome` package within the project's virtual environment to the latest version available from PyPI."
         },
-        {
-          "label": "$(mortar-board) README",
-          "task": "Open README File",
-          "tooltip": "Open the README.md markdown file"
-        },
+
       ],
     },
   ],
