@@ -44,7 +44,8 @@ NC='\033[0m' # No Color
 SEPARATOR="${CYAN}================================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n"
-echo -e "${GREEN}${BOLD}The init-esphome command has been installed to ${SCRIPT_PATH}${NC}\n"
+echo -e "${GREEN}${BOLD}The ${CYAN}'init-esphome'${NC} command has been installed to:
+echo -e "${SCRIPT_PATH}${NC}\n"
 
 echo -e "${BOLD}Installation is complete.${NC} You can now run ${CYAN}'init-esphome'${NC} from any location,"
 echo -e "to create the target folder if it does not already exist, then populate"
