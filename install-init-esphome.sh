@@ -46,7 +46,7 @@ BRIGHT_YELLOW='\033[38;5;11m'
 NC='\033[0m' # No Color
 
 # Decorative separator
-SEPARATOR="${BRIGHT_YELLOW}================================================================================${NC}"
+SEPARATOR="${BRIGHT_YELLOW}==============================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n\n"
 echo -e "  ${BOLD}Installation is complete.${NC}\n"
