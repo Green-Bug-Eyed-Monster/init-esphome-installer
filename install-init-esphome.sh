@@ -49,7 +49,7 @@ NC='\033[0m' # No Color
 SEPARATOR="${BRIGHT_YELLOW}================================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n"
-echo -e " ${BOLD}Installation is complete.${NC} The ${LIME_GREEN}init-esphome${NC} command has been installed to:\n"
+echo -e " ${BOLD}Installation is complete.${NC} Your ${LIME_GREEN}init-esphome${NC} command has been installed to:\n"
 echo -e " ${SCRIPT_PATH}\n"
 
 echo -e " You can now run the ${LIME_GREEN}init-esphome${NC} command from any location, to create"
