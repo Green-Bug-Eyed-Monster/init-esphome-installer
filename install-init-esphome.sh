@@ -47,8 +47,6 @@ echo -e "\n$SEPARATOR\n"
 echo -e "${GREEN}${BOLD}The init-esphome command has been installed to ${SCRIPT_PATH}${NC}\n"
 
 echo -e "${BOLD}Installation is complete.${NC} You can now run ${CYAN}'init-esphome'${NC} from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it does not already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment."
-echo -e "to download and set up an ESPHome development environment in any chosen"
-echo -e "target folder.\n"
 
 echo -e "${BOLD}Usage:${NC} ${CYAN}init-esphome <target-folder>${NC}"
 echo -e "\n$SEPARATOR\n"
