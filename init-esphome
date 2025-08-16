@@ -285,7 +285,12 @@ cat > .vscode/settings.json <<'EOF'
           "label": "$(search-refresh) Upgrade ESPHome",
           "task": "Upgrade ESPHome Version",
           "tooltip": "Upgrades the `esphome` package within the project's virtual environment to the latest version available from PyPI."
-       }
+        },
+        {
+          "label": "View README",
+          "task": "Open Markdown File",
+          "tooltip": "Open the README.md markdown file"
+        },
       ],
       "tooltip": "ESPHome Commands"
     },
