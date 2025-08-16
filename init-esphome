@@ -63,7 +63,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '2' | esphome run \"${file}\" && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '2' | esphome run \"${file}\" && deactivate"
       ],
       "problemMatcher": []
     },
@@ -73,7 +73,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '1' | esphome run ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '1' | esphome run ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -83,7 +83,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -94,7 +94,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && mkdir -p .esphome/build/${fileBasenameNoExtension} && esphome config ${file} | tee .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && code .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && deactivate"      ],
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && mkdir -p .esphome/build/${fileBasenameNoExtension} && esphome config ${file} | tee .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && code .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && deactivate"      ],
       "problemMatcher": []
     },
 
@@ -104,7 +104,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -114,7 +114,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && esphome upload ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && esphome upload ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -124,7 +124,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -134,7 +134,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Error: Destination folder '$DEST' already exists.\" >&2; exit 1; else source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp ${file} \"$DEST/${fileBasename}.bak\" && code \"$DEST\"; fi"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Error: Destination folder '$DEST' already exists.\" >&2; exit 1; else source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp ${file} \"$DEST/${fileBasename}.bak\" && code \"$DEST\"; fi"
       ],
       "problemMatcher": []
     },
@@ -154,7 +154,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
       ],
       "problemMatcher": []
     },
