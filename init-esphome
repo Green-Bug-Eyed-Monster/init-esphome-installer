@@ -247,7 +247,7 @@ cat > .vscode/settings.json <<'EOF'
       "tooltip": "This button launches the ESPHome web server dashboard for managing your project files through a browser interface.",
     },
     {
-      "label": "$(more) ESPHome",
+      "label": "$(menu) ESPHome",
       "tasks": [
         {
           "label": "$(pencil) Wizard",
