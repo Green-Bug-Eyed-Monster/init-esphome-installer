@@ -38,22 +38,28 @@ fi
 BOLD='\033[1m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
+BRIGHT_GREEN='\033[1;32m'
+BRIGHT_RED='\033[1;31m'
+BRIGHT_YELLOW='\033[1;33m'
+LIME_GREEN='\033[38;5;10m' 
+BRIGHT_YELLOW='\033[38;5;11m'
 NC='\033[0m' # No Color
 
 # Decorative separator
-SEPARATOR="${CYAN}================================================================================${NC}"
+SEPARATOR="${BRIGHT_YELLOW}================================================================================${NC}"
 
 echo -e "\n$SEPARATOR\n"
-echo -e "${BLUE}The${NC} ${GREEN}'init-esphome'${NC}${BLUE} command has been installed to:${NC}\n"
-echo -e "${SCRIPT_PATH}\n"
+echo -e " ${BOLD}Installation is complete.${NC} The ${LIME_GREEN}init-esphome${NC} command has been installed to:\n"
+echo -e " ${SCRIPT_PATH}\n"
 
-echo -e "${BOLD}Installation is complete.${NC} You can now run ${GREEN}'init-esphome'${NC} from any location,"
-echo -e "to create the target folder if it does not already exist, then populate"
-echo -e "it with all the files required to perform professional IOT node development,"
-echo -e "including the ESPHome component software framework, and a tailored"
-echo -e "Visual Studio Code environment.\n"
+echo -e " You can now run the ${LIME_GREEN}init-esphome${NC} command from any location, to create"
+echo -e " the target folder if it does not already exist, then populate it with all"
+echo -e " the files required to perform professional IOT node development, including"
+echo -e " the ESPHome component software framework, and a tailored Visual Studio"
+echo -e " Code environment.\n"
 
-echo -e "${BOLD}Usage:${NC} ${GREEN}init-esphome <target-folder>${NC}"
+echo -e " ${BOLD}Usage:${NC} ${LIME_GREEN}init-esphome <target-folder>${NC}"
+echo -e "\n  👽"
 echo -e "\n$SEPARATOR\n"
 
 
