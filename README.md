@@ -40,5 +40,5 @@ After installation, you may run the `init-esphome` script from any location, to 
 
 ---
 
-Please [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
+Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 
