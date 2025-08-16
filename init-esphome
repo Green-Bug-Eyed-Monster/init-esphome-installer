@@ -594,6 +594,40 @@ EOF
 echo "common/testing-config.yaml written."
 
 
+# Write to common/secrets.yaml
+
+cat > common/secrets.yaml <<'EOF'
+# ===================================================================
+# ESPHome Common Secrets Proxy
+#
+# This file serves a crucial role in making secrets available to
+# reusable configuration files located within this 'common/' directory,
+# such as 'test-setup.yaml'.
+#
+# --- How It Works & Why It's Important ---
+# When ESPHome processes a YAML file (like one included via `packages:`),
+# it looks for a 'secrets.yaml' file in the *same directory*.
+#
+# This file, being named 'secrets.yaml' and placed inside 'common/',
+# acts as a proxy or a bridge.
+#
+# The `<<: !include ../secrets.yaml` line uses two features:
+#  - `!include ../secrets.yaml`: This directive tells ESPHome to load the
+#    contents of the main secrets file from the parent directory.
+#  - `<<:`: This is a YAML "merge key". It merges all the key-value pairs
+#    from the included file into this one.
+#
+# The result is that any configuration within the 'common/' directory can
+# now use `!secret` tags and access the credentials defined in the
+# single, root `/secrets.yaml` file. This promotes a clean, secure,
+# and centralized secret management strategy, avoiding duplication.
+# ===================================================================
+<<: !include ../secrets.yaml
+EOF
+
+echo "common/secrets.yaml written."
+
+
 
 # Write to .vscode/extensions.json
 
