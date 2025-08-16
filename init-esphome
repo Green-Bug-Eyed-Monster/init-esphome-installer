@@ -288,13 +288,13 @@ cat > .vscode/settings.json <<'EOF'
         },
         {
           "label": "View README",
-          "task": "Open Markdown File",
+          "task": "Open README File",
           "tooltip": "Open the README.md markdown file"
         },
       ],
-      "tooltip": "ESPHome Commands"
     },
   ],
+  
   "markdown.preview.openMarkdownLinks": "inPreview",
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor",
