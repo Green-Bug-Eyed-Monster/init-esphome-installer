@@ -40,7 +40,5 @@ After installation, you may run the `init-esphome` script from any location, to 
 
 ---
 
-Please visit the [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) website.
-
-![Picture of a Green Bug-Eyed Monster.](/images/GBEM.jpg)
+Please [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 
