@@ -50,7 +50,7 @@ SEPARATOR="${BRIGHT_YELLOW}=====================================================
 
 echo -e "\n$SEPARATOR\n"
 echo -e " ${BOLD}Installation is complete.${NC}\n"
-echo -e " Your ${LIME_GREEN}init-esphome${NC} command has been installed to:\n"
+echo -e " Your ${LIME_GREEN}init-esphome${NC} command has been installed to:"
 echo -e " ${SCRIPT_PATH}\n"
 
 echo -e " You can now run the ${LIME_GREEN}init-esphome${NC} command from any location, to create"
