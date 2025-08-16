@@ -63,17 +63,17 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && echo '2' | esphome run ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '2' | esphome run \"${file}\" && deactivate"
       ],
       "problemMatcher": []
     },
-        {
+    {
       "label": "Bootstrap ESPHome Configuration",
       "type": "shell",
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && echo '1' | esphome run ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && echo '1' | esphome run ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -83,7 +83,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -94,7 +94,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && mkdir -p .esphome/build/${fileBasenameNoExtension} && esphome config ${file} | tee .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && code .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && deactivate"      ],
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && mkdir -p .esphome/build/${fileBasenameNoExtension} && esphome config ${file} | tee .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && code .esphome/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.validated.yaml && deactivate"      ],
       "problemMatcher": []
     },
 
@@ -104,7 +104,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && esphome compile ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -114,7 +114,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && esphome upload ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome compile ${file} && esphome upload ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -124,17 +124,17 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && esphome clean ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean ${file} && deactivate"
       ],
       "problemMatcher": []
     },
     {
-      "label": "Open PlatformIO Project",
+      "label": "Open PlatformIO Snapshot",
       "type": "shell",
       "command": "bash",
       "args": [
         "-c",
-        "cp -r .esphome/build/${fileBasenameNoExtension} ./PlatformIO/ && cp ${file} ./PlatformIO/${fileBasenameNoExtension}/${fileBasename}.bak && code ./PlatformIO/${fileBasenameNoExtension}"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Error: Destination folder '$DEST' already exists.\" >&2; exit 1; else source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp ${file} \"$DEST/${fileBasename}.bak\" && code \"$DEST\"; fi"
       ],
       "problemMatcher": []
     },
@@ -154,7 +154,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be focussed.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
       ],
       "problemMatcher": []
     },
@@ -198,89 +198,76 @@ cat > .vscode/settings.json <<'EOF'
     {
       "label": "$(check) Validate",
       "task": "Validate ESPHome Configuration",
-      "tooltip": "Validate ESPHome Configuration"
+      "tooltip": "Validates the currently focused YAML configuration file.",
     },
     {
       "label": "$(plug) Bootstrap",
       "task": "Bootstrap ESPHome Configuration",
-      "tooltip": "Bootstrap ESPHome Configuration"
+      "tooltip": "This button is used for the compiling and initial flashing of a device over a direct USB/serial connection. It also displays the device's logs via USB/serial.",
     },
     {
       "label": "$(broadcast) Run",
       "task": "Run ESPHome Configuration",
-      "tooltip": "Run ESPHome Configuration"
+      "tooltip": "This button compiles and uploads the configuration to a device that is already on the network, using an Over-the-Air (OTA) update. It also displays the device's logs via wifi.",
     },
     {
       "label": "$(default-view-icon) Dashboard",
       "task": "Bring-up ESPHome Device Builder Dashboard",
-      "tooltip": "Bring-up ESPHome Device Builder Dashboard"
+      "tooltip": "This button launches the ESPHome web server dashboard for managing your project files through a browser interface.",
     },
     {
       "label": "$(more) ESPHome",
       "tasks": [
         {
-          "label": "$(plus) Wizard",
+          "label": "$(pencil) Wizard",
           "task": "ESPHome Wizard",
-          "tooltip": "ESPHome Wizard"
+          "tooltip": "Launches an interactive wizard to help you create a new device configuration file from scratch."
         },
 
         {
           "label": "$(plug) Bootstrap",
           "task": "Bootstrap ESPHome Configuration",
-          "tooltip": "Bootstrap ESPHome Configuration"
+          "tooltip": "This button is used for the compiling and **initial flashing** of a device over a direct USB/serial connection. It also displays the device's logs via USB/serial."
         },
 
         {
           "label": "$(broadcast) Run",
           "task": "Run ESPHome Configuration",
-          "tooltip": "Run ESPHome Configuration"
+          "tooltip": "This button compiles and uploads the configuration to a device that is already on the network, using an **Over-the-Air (OTA)** update. It also displays the device's logs via wifi."
         },
-
         {
           "label": "$(wrench) Build",
           "task": "Build Configuration Binary",
-          "tooltip": "Build Configuration Binary"
+          "tooltip": "Compiles your YAML configuration into a binary firmware file (`.bin`) without uploading it. This is useful for checking for compilation errors or for manual flashing with other tools. The binary is stored in the `.esphome/build/<node-name>/` directory."
         },
-
         {
-          "label": "$(rss) Upload",
+          "label": "$(arrow-up) Upload",
           "task": "Upload Configuration Binary",
-          "tooltip": "BUpload Configuration Binary"
+          "tooltip": "Uploads a previously compiled firmware binary to your device. If the binary doesn't exist or is stale, it will compile it first."
         },
         {
           "label": "$(trash) Clean",
           "task": "Clean Configuration Build",
-          "tooltip": "Clean Configuration Build"
+          "tooltip": "Removes all the temporary build files and the compiled firmware binary for the currently focused YAML configuration. This is useful for forcing a complete re-compilation from scratch."
         },
         {
-          "label": "$(trash) Clean-Up MQTT",
+          "label": "$(notebook-clear) Clean-Up MQTT",
           "task": "Cleanup MQTT Topics",
-          "tooltip": "Cleanup MQTT Topics"
+          "tooltip": "Removes retained MQTT discovery messages from your MQTT broker for the device specified in the focused YAML file. This helps clean up old or orphaned device entries in Home Assistant."
+        },
+        {
+          "label": "$(device-camera) Platformio Snapshot",
+          "task": "Open PlatformIO Snapshot",
+          "tooltip": "Generates a complete, standalone PlatformIO C++ project from your YAML file. This is for advanced users who want to modify the underlying C++ code. The new project is copied to the `PlatformIO/` directory in your workspace and opened in a new VS Code window. It prevents overwriting by checking if a project with the same name already exists."
         },
         {
           "label": "$(search-refresh) Upgrade ESPHome",
           "task": "Upgrade ESPHome Version",
-          "tooltip": "Upgrade ESPHome Version"
-        }
+          "tooltip": "Upgrades the `esphome` package within the project's virtual environment to the latest version available from PyPI."
+       }
       ],
       "tooltip": "ESPHome Commands"
     },
-    {
-      "label": "$(more) Platformio",
-      "tasks": [
-        {
-          "label": "$(empty-window) Generate Project",
-          "task": "Generate Project Source",
-          "description": "Generate Platformio Source"
-        },
-        {
-          "label": "$(pencil) Open Project",
-          "task": "Open PlatformIO Project",
-          "description": "Open PlatformIO Project"
-        }
-      ],
-      "tooltip": "Platformiop Commands"
-    } 
   ],
 }
 EOF
@@ -605,6 +592,176 @@ cat > .vscode/extensions.json <<'EOF'
 EOF
 
 echo ".vscode/extensions.json written."
+
+
+
+# Write to documents/README.md
+
+cat > documents/README.md <<'EOF'
+
+# The init-esphome VS Code Task Buttons README
+
+This document describes the function of each custom task button available in the Visual Studio Code status bar for this ESPHome project. These buttons provide convenient shortcuts for common development tasks.
+
+**Note:** Most of these tasks require you to have the relevant ESPHome configuration file (e.g., `<node-name.yaml>`) open and focused in the editor.
+
+---
+
+### `Validate`
+
+**Task:** `Validate ESPHome Configuration`
+
+This button validates the currently focused YAML configuration file.
+
+**Sequence of Actions:**
+1.  Checks that the currently active file in the editor has a `.yaml` extension.
+2.  Activates the project's Python virtual environment (`./venv`).
+3.  Creates a build directory for the configuration file inside `.esphome/build/` called `<node-name>`.
+4.  Runs the `esphome config` command on your file. This command validates the syntax and expands all substitutions and packages.
+5.  The fully-expanded configuration is saved to a new file named `<node-name.validated.yaml>` inside the build directory.
+6.  The new `<node-name.validated.yaml>` file is automatically opened in VS Code for your review.
+7.  Deactivates the virtual environment.
+
+---
+
+### `Bootstrap`
+
+**Task:** `Bootstrap ESPHome Configuration`
+
+This button is used for the compiling and **initial flashing** of a device over a direct USB/serial connection. It also displays the device's logs via USB/serial.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the virtual environment.
+3.  Executes `esphome run <node-name.yaml>`, automatically selecting the **first** upload option presented (which is typically the USB/serial port).
+4.  This compiles the firmware, connects to the device via serial, and uploads the firmware.
+5.  After a successful upload, it connects to the device by USB/serial port to stream its logs to the VS Code terminal.
+6.  Deactivates the virtual environment.
+
+---
+
+### `Run`
+
+**Task:** `Run ESPHome Configuration`
+
+This button compiles and uploads the configuration to a device that is already on the network, using an **Over-the-Air (OTA)** update. It also displays the device's logs via wifi.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the virtual environment.
+3.  Executes `esphome run <node-name.yaml>`, automatically selecting the **second** upload option presented (which is typically OTA).
+4.  This compiles the firmware and uploads it wirelessly to the device.
+5.  After a successful upload, it connects to the device wirelessly to stream its logs to the VS Code terminal.
+6.  Deactivates the virtual environment when the process is stopped.
+
+---
+
+### `Dashboard`
+
+**Task:** `Bring-up ESPHome Device Builder Dashboard`
+
+This button launches the ESPHome web server dashboard for managing your project files through a browser interface.
+
+**Sequence of Actions:**
+1.  Opens `http://127.0.0.1:6052` in your system's default web browser.
+2.  Activates the virtual environment.
+3.  Starts the ESPHome dashboard, serving the configuration files from the current project directory (`.`).
+4.  The dashboard process runs in the terminal until you stop it (e.g., with `Ctrl+C`).
+5.  Deactivates the virtual environment upon exit.
+
+---
+
+### `ESPHome` (Dropdown Menu)
+
+This is a dropdown menu containing a collection of other useful ESPHome commands.
+
+#### `Wizard`
+**Task:** `ESPHome Wizard`
+
+Launches an interactive wizard to help you create a new device configuration file from scratch.
+
+**Sequence of Actions:**
+1.  Runs a helper script (`.vscode/run_esphome_wizard.sh`).
+2.  The script prompts you in the terminal to enter a filename for the new configuration.
+3.  It then runs the `esphome wizard` command, which asks you a series of questions about your device (name, platform, Wi-Fi, etc.).
+4.  Once the wizard is complete, the new YAML file is created and automatically opened in VS Code.
+
+#### `Build`
+**Task:** `Build Configuration Binary`
+
+Compiles your YAML configuration into a binary firmware file (`.bin`) without uploading it. This is useful for checking for compilation errors or for manual flashing with other tools. The binary is stored in the `.esphome/build/<node-name>/` directory.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the project's Python virtual environment (`./venv`).
+3.  Runs `esphome compile <node-name.yaml>`.
+4.  Deactivates the virtual environment.
+
+#### `Upload`
+**Task:** `Upload Configuration Binary`
+
+Uploads a previously compiled firmware binary to your device. If the binary doesn't exist or is stale, it will compile it first.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the project's Python virtual environment (`./venv`).
+3.  Runs `esphome compile <node-name.yaml>`.
+4.  Runs `esphome upload <node-name.yaml>`.
+5.  Deactivates the virtual environment.
+
+#### `Clean`
+**Task:** `Clean Configuration Build`
+
+Removes all the temporary build files and the compiled firmware binary for the currently focused YAML configuration. This is useful for forcing a complete re-compilation from scratch.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the virtual environment.
+3.  Runs `esphome clean <node-name.yaml>`.
+4.  Deactivates the virtual environment.
+
+#### `Clean-Up MQTT`
+**Task:** `Cleanup MQTT Topics`
+
+Removes retained MQTT discovery messages from your MQTT broker for the device specified in the focused YAML file. This helps clean up old or orphaned device entries in Home Assistant.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file.
+2.  Activates the virtual environment.
+3.  Runs `esphome clean-mqtt <node-name.yaml>`.
+4.  Deactivates the virtual environment.
+
+#### `Platformio Snapshot`
+**Task:** `Open PlatformIO Snapshot`
+
+Generates a complete, standalone PlatformIO C++ project from your YAML file. This is for advanced users who want to modify the underlying C++ code. The new project is copied to the `PlatformIO/` directory in your workspace and opened in a new VS Code window. It prevents overwriting by checking if a project with the same name already exists.
+
+**Sequence of Actions:**
+1.  Checks that the active file is a `.yaml` file and that the destination `PlatformIO/<node-name>` folder doesn't already exist.
+2.  Activates the project's Python virtual environment (`./venv`).
+3.  Runs `esphome compile --only-generate` on the YAML file, which creates the C++ source code and PlatformIO project structure inside the `.esphome/build/<node-name>/` directory.
+4.  Deactivates the virtual environment.
+5.  Copies the entire generated project from the build directory to `PlatformIO/<node-name>/`.
+6.  Copies the original YAML configuration file into the new project directory as a backup (`<node-name.bak>`).
+7.  Opens the newly created project folder (`PlatformIO/<node-name>/`) in a new VS Code window.
+
+#### `Upgrade ESPHome`
+**Task:** `Upgrade ESPHome Version`
+
+Upgrades the `esphome` package within the project's virtual environment to the latest version available from PyPI.
+
+**Sequence of Actions:**
+1.  Activates the project's Python virtual environment (`./venv`).
+2.  Executes `pip install --upgrade esphome`.
+3.  Deactivates the virtual environment.
+
+---
+
+Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
+EOF
+
+echo "documents/README.md written."
+
 
 
 
