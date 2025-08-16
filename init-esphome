@@ -250,6 +250,11 @@ cat > .vscode/settings.json <<'EOF'
       "label": "$(menu) ESPHome",
       "tasks": [
         {
+          "label": "$(mortar-board) README",
+          "task": "Open README File",
+          "tooltip": "Open the README.md markdown file"
+        },
+        {
           "label": "$(pencil) Wizard",
           "task": "ESPHome Wizard",
           "tooltip": "Launches an interactive wizard to help you create a new device configuration file from scratch."
