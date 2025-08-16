@@ -290,6 +290,10 @@ cat > .vscode/settings.json <<'EOF'
       "tooltip": "ESPHome Commands"
     },
   ],
+  "markdown.preview.openMarkdownLinks": "inPreview",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor",
+  }
 }
 EOF
 
@@ -830,4 +834,4 @@ echo "documents/README.md written."
 
 # Open project folder in Visual Studio Code
 
-code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
+code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml documents/README.md
