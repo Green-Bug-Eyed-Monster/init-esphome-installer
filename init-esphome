@@ -200,6 +200,16 @@ cat > .vscode/tasks.json <<'EOF'
       },
       "problemMatcher": []
     },
+    {
+      "label": "Open README File",
+      "type": "shell",
+      "command": "code",
+      "args": ["documents/README.md"],  // or your markdown file path
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
   ]
 }
 EOF
