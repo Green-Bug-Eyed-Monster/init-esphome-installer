@@ -46,6 +46,7 @@ Again check that your Linux distribution has Python3 version 3.11 or later.
 python --version
   Python 3.14.0rc2   ✓
 ```
+<br>
 
 **Install Microsoft Visual Studio Code if necessary...**
 
