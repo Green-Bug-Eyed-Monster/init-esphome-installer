@@ -31,20 +31,36 @@ Check current system's available package lists for all available python3 version
 ```
 apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
 ```
-Add latest Python 3.xx as an alternative version of python3.
+Add required Python release as an alternative version of python3.
 ```
-sudo apt install python3.14
+sudo apt install python3.11
 ```
 Make it selectable via the update-alternatives system.
 ```
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.15 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 ```
-This configures which Python version runs when you type python.
+To select the Python version you want to use (e.g., Python 3.11), run:
+```
+sudo update-alternatives --config python3
+```
+You’ll see an output like this:
+```
+There are 2 choices for the alternative python3 (providing /usr/bin/python3).
 
-Again check that your Linux distribution has Python3 version 3.11 or later.
+  Selection    Path                 Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/python3.14   1         auto mode
+  1            /usr/bin/python3.11   1         manual mode
+  2            /usr/bin/python3.14   1         manual mode
 ```
-python --version
-  Python 3.14.0rc2   ✓
+Then type the number corresponding to /usr/bin/python3.11 and press Enter.
+
+This selects which Python version runs when you type python.
+
+Again check that your Linux distribution has the requisite Python3 version installed and active.
+```
+python3 --version
+Python 3.11.13   ✓
 ```
 <br>
 
