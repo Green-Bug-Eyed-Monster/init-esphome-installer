@@ -439,6 +439,8 @@ packages:
 
 EOF
 
+chmod a-w boiler-plate.yaml    # Make file read-only
+
 echo "boiler-plate.yaml written."
 
 
@@ -501,6 +503,8 @@ mqtt_username: "<mqtt_broker_username>"
 mqtt_password: "<mqtt_broker_password>"
 
 EOF
+
+chmod a-w secrets-form.yaml    # Make file read-only
 
 echo "secrets-form.yaml written."
 
