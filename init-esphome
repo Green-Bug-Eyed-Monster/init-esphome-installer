@@ -54,7 +54,7 @@ echo "Initialising ESPHome environment in: $TARGET_DIR"
 # Clean-up to allow re-initialisation of a previously populated directory.
 for file in boiler-plate.yaml secrets-form.yaml documents/README.md; do
     if [ -f "$file" ]; then
-        rm "$file"
+        rm -f "$file"
     fi
 done
 
