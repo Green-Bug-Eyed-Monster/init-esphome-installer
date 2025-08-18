@@ -14,7 +14,7 @@ python --version
 ```
 <br>
 
-**Update python if necessary...**
+**Update Python if necessary...**
 
 Add the software-properties-common package for the add-apt-repository command,
 whether or not already installed.
