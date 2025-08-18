@@ -23,7 +23,7 @@ mkdir -p "$TARGET_DIR"
 # Change into the folder
 cd "$TARGET_DIR"
 
-echo "Initializing ESPHome environment in: $TARGET_DIR"
+echo "Initialising ESPHome environment in: $TARGET_DIR"
 
 # Create subfolders
 mkdir -p documents icons hardware common PlatformIO
