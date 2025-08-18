@@ -764,7 +764,7 @@ This button launches the ESPHome web server dashboard for managing your project 
 
 ---
 
-### `ESPHome` (Dropdown Menu)
+### Additional Buttons via `ESPHome` (Dropdown Menu)
 
 This is a dropdown menu containing a collection of other useful ESPHome commands.
 
