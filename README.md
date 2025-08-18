@@ -82,7 +82,7 @@ https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d
 sudo apt update
 sudo apt install code
 ```
-
+<br>
 
 ### Installation
 
