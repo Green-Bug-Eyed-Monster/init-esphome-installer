@@ -97,7 +97,6 @@ mkdir -p .vscode
 cat > .vscode/tasks.json <<'EOF'
 { //
   // Copyright © 2025 Green.Bug-Eyed.Monster
-  // License: MIT
   //
   "version": "2.0.0",
   "tasks": [
@@ -248,7 +247,6 @@ echo ".vscode/tasks.json written."
 cat > .vscode/settings.json <<'EOF'
 { //
   // Copyright © 2025 Green.Bug-Eyed.Monster
-  // License: MIT
   //
   "VsCodeTaskButtons.showCounter": true,
   "VsCodeTaskButtons.tasks": [
@@ -354,7 +352,6 @@ cat > .vscode/run_esphome_wizard.sh <<'EOF'
 #!/usr/bin/env bash
 
 # Copyright © 2025 Green.Bug-Eyed.Monster
-# License: MIT
 
 # There are inadequacies in the way task initiated environments inherit inputs.
 
@@ -718,7 +715,6 @@ cat > documents/README.md <<'EOF'
 # The init-esphome VS Code Task Buttons README
 
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
-<!-- License: MIT -->
 
 This document describes the function of each custom task button available in the Visual Studio Code status bar for this init-esphome generated ESPHome project. These buttons provide convenient shortcuts for common development tasks.
 
@@ -876,7 +872,6 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 
 ---
 Copyright © 2025 Green.Bug-Eyed.Monster
-License: MIT
 
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 EOF
