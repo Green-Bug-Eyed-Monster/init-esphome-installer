@@ -99,7 +99,11 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 ### Use
 After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it does not already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment. Any downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the working folder. i.e. When the working folder is erased, all customisation is lost.
 
-**Usage:** `init-esphome <target-folder>`
+To initialise a folder for ESPHome development, creating it if necessary, referencing the absolute or relative path to the target folder, use:
+```
+init-esphome <target-folder>
+```
+
 <br><br>
 
 ### Removal
