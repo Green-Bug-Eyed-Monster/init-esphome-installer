@@ -685,7 +685,7 @@ cat > documents/README.md <<'EOF'
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
 <!-- License: MIT -->
 
-This document describes the function of each custom task button available in the Visual Studio Code status bar for this ESPHome project. These buttons provide convenient shortcuts for common development tasks.
+This document describes the function of each custom task button available in the Visual Studio Code status bar for this init-esphome generated ESPHome project. These buttons provide convenient shortcuts for common development tasks.
 
 **Note:** Most of these tasks require you to have the relevant ESPHome configuration file (e.g., `<node-name.yaml>`) open and focused in the editor.
 
