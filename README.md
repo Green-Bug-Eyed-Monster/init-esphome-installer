@@ -96,11 +96,9 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 
 
 ### Use
-After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. 
+After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder[^1]. 
 
 It will create the target folder if it does not already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment. 
-
-Any first-run-downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the working folder. i.e. When the working folder is erased, all customisation is lost.
 
 **To initialize a folder for ESPHome development**—creating it if it doesn't already exist—use the following command with the absolute or relative path to the target folder:
 ```
@@ -109,7 +107,7 @@ init-esphome <target-folder>
 
 
 ### Removal
-To remove the `init-esphome` command script from your ~/.local/bin folder completely[^1], just run the following shell command.
+To remove the `init-esphome` command script from your ~/.local/bin folder completely[^2], just run the following shell command.
 ```
 rm ~/.local/bin/init-esphome
 ```
@@ -119,5 +117,6 @@ rm ~/.local/bin/init-esphome
 
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 
-[^1]: The ~/.local/bin path possibly set during installation, isn't removed in this step, as it may still be in use. The path ~/.local/bin refers to a folder commonly used for user-specific executable files, on many later Linux distributions.
+[^1]: Any first-run-downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the working folder. i.e. When the working folder is erased, all customisation is lost.
+[^2]: The ~/.local/bin path possibly set during installation, isn't removed in this step, as it may still be in use. The path ~/.local/bin refers to a folder commonly used for user-specific executable files, on many later Linux distributions.
 
