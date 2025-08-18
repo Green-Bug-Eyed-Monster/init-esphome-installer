@@ -9,7 +9,7 @@ The version of Python needed to run ESPHome may change over time. Check the inst
 
 At the time of writing, ESPHome required Python version 3.10.
 ```
-python --version
+python3 --version
   Python 3.9.18    ✗ 
 ```
 <br>
