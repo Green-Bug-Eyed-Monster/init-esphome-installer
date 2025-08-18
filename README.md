@@ -54,7 +54,9 @@ There are 2 choices for the alternative python3 (providing /usr/bin/python3).
   2            /usr/bin/python3.14   1         manual mode
 ```
 Then type the number corresponding to /usr/bin/python3.11 and press Enter.
-
+```
+1
+```
 This selects which Python version runs when you type python.
 
 Again check that your Linux distribution has the requisite Python3 version installed and active.
