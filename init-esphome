@@ -272,6 +272,11 @@ cat > .vscode/settings.json <<'EOF'
           "tooltip": "This button compiles and uploads the configuration to a device that is already on the network, using an **Over-the-Air (OTA)** update. It also displays the device's logs via wifi."
         },
         {
+          "label": "$(default-view-icon) Dashboard",
+          "task": "Bring-up ESPHome Device Builder Dashboard",
+          "tooltip": "Launch ESPHome Dashboard web server.",
+        },
+        {
           "label": "$(wrench) Build",
           "task": "Build Configuration Binary",
           "tooltip": "Compiles your YAML configuration into a binary firmware file (`.bin`) without uploading it. This is useful for checking for compilation errors or for manual flashing with other tools. The binary is stored in the `.esphome/build/<node-name>/` directory."
