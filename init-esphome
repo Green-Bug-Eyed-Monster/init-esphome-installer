@@ -405,7 +405,7 @@ substitutions:
 # specific files clean and to reuse code across multiple devices.
 # ===================================================================
 
-# --- Why `packages` is used instead of a simple `!include` ---
+# --- Why `packages` is used instead of a simple `<<: !include` ---
 # The standard YAML merge `<<: !include ...` is a simple text inclusion.
 # It fails if both this file and the included file define the same
 # top-level key (like 'api:' or 'logger:').
