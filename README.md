@@ -111,7 +111,7 @@ To remove the `init-esphome` command script from your ~/.local/bin folder comple
 ```
 rm ~/.local/bin/init-esphome
 ```
-The path should be left unaltered.[^2]
+The path remains unaltered.[^2]
 <br>
 
 ---
