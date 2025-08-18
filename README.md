@@ -99,6 +99,12 @@ After installation, you may run the `init-esphome` script from any location, to 
 
 **Usage:** `init-esphome <target-folder>`
 
+### Removal
+To remove the `init-esphome` command script from your ~/.local/bin folder, just run the following shell command.
+```
+rm ~/.local/bin/init-esphome
+```
+
 ---
 
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
