@@ -4,8 +4,10 @@
 The `init-esphome` script creates project folders, ready set-up to perform professional IOT node development, using the ESPHome component software framework, inside a tailored Visual Studio Code environment, on Debian-style Linux systems. The `install-init-esphome.sh` script downloads and installs the `init-esphome` command.
 
 ### Prerequisites
+The requisite Python version to run ESPHome changes over time. Check the changelogs to see the minimum Python version you'll need run ESPHome.
+[[Green Bug-Eyed Monster](https://esphome.io/changelog/)]([https://green.bug-eyed.monster](https://esphome.io/changelog/)) 
 
-Check that your Linux distribution has Python3 version 3.11 or later.
+In Aug '25 ESPHome required Python3 version 3.11 or later.
 ```
 python --version
   Python 3.10.12   ✗ 
