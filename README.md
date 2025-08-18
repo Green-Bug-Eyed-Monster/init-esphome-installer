@@ -14,7 +14,7 @@ python --version
 Update python as necessary.
 
 Add the software-properties-common package for the add-apt-repository command,
-whether not already installed.
+whether or not already installed.
 ```
 sudo apt update
 sudo apt install software-properties-common
