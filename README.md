@@ -7,10 +7,10 @@ The `init-esphome` script creates project folders, ready set-up to perform profe
 The version of Python needed to run ESPHome changes over time. Check the installation guide to see which specific Python version you'll need to run ESPHome. 
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
 
-In Aug '25, ESPHome required Python3 version 3.11 or later.
+In Aug '25, ESPHome required Python3 version 3.10.
 ```
 python --version
-  Python 3.10.12   ✗ 
+  Python 3.9.18    ✗ 
 ```
 <br>
 
@@ -33,27 +33,30 @@ apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
 ```
 Add required Python release as an alternative version of python3.
 ```
-sudo apt install python3.11
+sudo apt install python3.10
 ```
 Make it selectable via the update-alternatives system.
 ```
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 ```
-To select the Python version you want to use (e.g., Python 3.11), run:
+To select the Python version you want to use (e.g., Python 3.10), run:
 ```
 sudo update-alternatives --config python3
 ```
 You’ll see an output like this:
 ```
-There are 2 choices for the alternative python3 (providing /usr/bin/python3).
+There are 4 choices for the alternative python3 (providing /usr/bin/python3).
 
   Selection    Path                 Priority   Status
 ------------------------------------------------------------
-* 0            /usr/bin/python3.14   1         auto mode
-  1            /usr/bin/python3.11   1         manual mode
-  2            /usr/bin/python3.14   1         manual mode
+  0            /usr/bin/python3.11   1         auto mode
+  1            /usr/bin/python3.10   1         manual mode
+  2            /usr/bin/python3.11   1         manual mode
+  3            /usr/bin/python3.14   1         manual mode
+* 4            /usr/bin/python3.9    1         manual mode
+
 ```
-Then type the number corresponding to /usr/bin/python3.11 and press Enter.
+Then type the number corresponding to /usr/bin/python3.10 and press Enter.
 ```
 1
 ```
@@ -62,7 +65,7 @@ This selects which Python version runs when you type python.
 Again check that your Linux distribution has the requisite Python3 version installed and active.
 ```
 python3 --version
-Python 3.11.13   ✓
+Python 3.10.12   ✓
 ```
 <br>
 
