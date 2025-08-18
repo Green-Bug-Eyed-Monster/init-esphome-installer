@@ -31,7 +31,7 @@ Check current system's available package lists for all available python3 version
 ```
 apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
 ```
-Add latest Python 3.XX as an alternative version of python3.
+Add latest Python 3.xx as an alternative version of python3.
 ```
 sudo apt install python3.14
 ```
