@@ -855,6 +855,8 @@ License: MIT
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 EOF
 
+chmod a-w documents/README.md    # Make file read-only
+
 echo "documents/README.md written."
 
 
