@@ -31,7 +31,8 @@ To install the `init-esphome` command script in your ~/.local/bin folder, creati
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
 > [!NOTE]
-> If you have any security concerns, please review the [`install-init-esphome.sh`](./install-init-esphome.sh) installation script, as well as the [`init-esphome`](./init-esphome) development environment creation script itself, before invoking the installer.
+> This is an open-source resource, fully available for inspection.
+> If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) environment setup script before running the installer.
 
 ### Use
 After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment, in any chosen target folder. It will create the target folder if it does not already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment. Any downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the working folder. i.e. When the working folder is erased, all customisation is lost.
