@@ -871,9 +871,10 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 3.  Deactivates the virtual environment.
 
 ---
+Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
+
 Copyright © 2025 Green.Bug-Eyed.Monster
 
-Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 EOF
 
 chmod a-w documents/README.md    # Make file read-only
