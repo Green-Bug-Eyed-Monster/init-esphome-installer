@@ -12,7 +12,8 @@ In Aug '25, ESPHome required Python3 version 3.11 or later.
 python --version
   Python 3.10.12   ✗ 
 ```
-<br> 
+<br>
+
 **Update python if necessary...**
 
 Add the software-properties-common package for the add-apt-repository command,
