@@ -5,11 +5,35 @@ The `init-esphome` script creates project folders, ready set-up to perform profe
 
 ### Prerequisites
 
-Check that your Linux distribution has Python3 version 3.10 or later.
+Check that your Linux distribution has Python3 version 3.11 or later.
 ```
 python --version
-  Python 3.10.12  ✓
+  Python 3.10.12  ✗ ✓
 ```
+
+Update python as necessary.
+
+Add the software-properties-common package for the add-apt-repository command,
+whether not already installed.
+```
+sudo apt update
+sudo apt install software-properties-common
+```
+Add the deadsnakes PPA (Personal Package Archive).
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+```
+Add Python 3.12 as an alternative version of python3.
+```
+sudo apt install python3.12
+```
+Make it selectable via the update-alternatives system.
+```
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+```
+This configures which Python version runs when you type python3.
+
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
 ```
