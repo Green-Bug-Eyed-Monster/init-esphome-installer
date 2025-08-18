@@ -103,7 +103,7 @@ After installation, you may run the `init-esphome` script from any location, to 
 <br><br>
 
 ### Removal
-To remove the `init-esphome` command script from your ~/.local/bin folder, just run the following shell command.
+To remove the `init-esphome` command script from your ~/.local/bin folder completely, just run the following shell command.
 ```
 rm ~/.local/bin/init-esphome
 ```
