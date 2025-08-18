@@ -22,7 +22,7 @@ if not already installed.
 sudo apt update
 sudo apt install software-properties-common
 ```
-Add the deadsnakes PPA (Personal Package Archive).
+Add the deadsnakes PPA (Personal Package Archive), and update local package lists.
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
