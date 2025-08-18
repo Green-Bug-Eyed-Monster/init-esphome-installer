@@ -60,7 +60,7 @@ Then type the number corresponding to /usr/bin/python3.10 and press Enter.
 ```
 1
 ```
-This selects which Python version runs when you type `python`.
+This selects which Python version runs when you type `python3`.
 
 Again check that your Linux distribution has the requisite Python3 version installed, as well selected in the update-alternatives system.
 ```
