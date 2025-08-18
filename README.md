@@ -92,7 +92,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 ```
 > [!NOTE]
 > These are open-source resources, fully available for inspection.
-> If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script before running the installer.
+> If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script, before running the installer.
 
 
 ### Use
