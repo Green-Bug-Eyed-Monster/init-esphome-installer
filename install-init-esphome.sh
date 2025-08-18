@@ -59,7 +59,7 @@ echo -e "  the files required to perform professional IOT node development, incl
 echo -e "  the ESPHome component software framework, and a tailored Visual Studio"
 echo -e "  Code environment.\n"
 
-echo -e "  ${BOLD}Usage:${NC} ${LIME_GREEN}init-esphome <target-folder>${NC}"
+echo -e "  ${BOLD}Usage:${NC} ${LIME_GREEN}init-esphome${NC} <target-folder>"
 echo -e "\n   👽\n"
 echo -e "\n$SEPARATOR\n"
 
