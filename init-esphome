@@ -96,6 +96,7 @@ else
   echo "Git repository de-initialised."
 fi
 
+
 # Create Visual Studio Code configuration folder
 
 mkdir -p .vscode
