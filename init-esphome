@@ -869,7 +869,7 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 1.  Activates the project's Python virtual environment (`./venv`).
 2.  Executes `pip install --upgrade esphome`.
 3.  Deactivates the virtual environment.
-<br>
+<br><br>
 ---
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 <br><small>Copyright © 2025 Green.Bug-Eyed.Monster</small>
