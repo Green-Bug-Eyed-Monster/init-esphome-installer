@@ -11,7 +11,7 @@ python --version
   Python 3.10.12   ✗ 
 ```
 
-Update python if necessary.
+**Update python if necessary...**
 
 Add the software-properties-common package for the add-apt-repository command,
 whether or not already installed.
@@ -44,6 +44,7 @@ python --version
   Python 3.14.0rc2   ✓
 ```
 
+**Install Microsoft Visual Studio Code if necessary...**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
 ```
