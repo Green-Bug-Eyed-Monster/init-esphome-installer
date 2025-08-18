@@ -1,16 +1,21 @@
-MIT License
+Copyright © 2025 Green.Bug-Eyed.Monster
 
-Copyright (c) 2025 Green.Bug-Eyed.Monster green@bug-eyed.monster
+Permission is hereby granted to any person obtaining a copy of this software 
+and associated documentation files (the "Software"), to use, copy, and distribute 
+the Software solely for its intended purpose, subject to the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. The Software may not be used for the purpose of reverse engineering, decompiling, 
+   disassembling, or otherwise attempting to discover or replicate its underlying 
+   structure, algorithms, or implementation details.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. The Software may not be used, in whole or in part, as the basis for developing 
+   any competing or derivative works.
+
+3. This license does not grant permission to modify, sublicense, or create 
+   derivative works of the Software beyond its intended use.
+
+4. The above copyright notice and this permission notice shall be included in 
+   all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
