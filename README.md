@@ -7,7 +7,7 @@ The `init-esphome` script creates project folders, ready set-up to perform profe
 The requisite Python version to run ESPHome changes over time. Check the changelogs to see which minimum Python version you'll need to run ESPHome. 
 ([https://esphome.io/changelog/](https://esphome.io/changelog/)) 
 
-In Aug '25 ESPHome required Python3 version 3.11 or later.
+In Aug '25, ESPHome required Python3 version 3.11 or later.
 ```
 python --version
   Python 3.10.12   ✗ 
