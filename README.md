@@ -105,11 +105,13 @@ init-esphome <target-folder>
 
 
 ### Removal
-To remove the `init-esphome` command script from your ~/.local/bin folder completely, just run the following shell command.
+To remove the `init-esphome` command script from your ~/.local/bin folder completely[^1], just run the following shell command.
 ```
 rm ~/.local/bin/init-esphome
 ```
 <br>
+[^1]: The ~/.local/bin path possibly set during installation, isn't removed in this step, as it may still be in use. The path ~/.local/bin refers to a folder commonly used for user-specific executable files, on many later Linux distributions.
+
 
 ---
 
