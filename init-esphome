@@ -92,7 +92,8 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
   git init
   echo "Git repository initialised."
 else
-  echo "Git repository not initialised."
+  [ -d .git ] && mv .git .git_backup
+  echo "Git repository de-initialised."
 fi
 
 # Create Visual Studio Code configuration folder
