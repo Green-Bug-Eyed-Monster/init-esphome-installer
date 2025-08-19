@@ -96,7 +96,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 
 
 ### Use
-After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment (~150MB), in any chosen target folder.[^1] 
+After installation, you may run the `init-esphome` script from any location, to download and set up an ESPHome development environment (~150MB), in any chosen target folder. 
 
 It will create the target folder if it does not already exist, then populate it with all the files required to perform professional IOT node development, including the ESPHome component software framework, and a tailored Visual Studio Code environment. 
 
@@ -107,7 +107,7 @@ init-esphome <target-folder>
 
 
 ### Removal
-To remove the `init-esphome` command script from your ~/.local/bin folder completely, just run the following shell command.
+To remove the `init-esphome` command script from your ~/.local/bin folder completely, just run the following shell command.[^1]
 ```
 rm ~/.local/bin/init-esphome
 ```
