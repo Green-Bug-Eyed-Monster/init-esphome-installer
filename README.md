@@ -5,6 +5,7 @@ The `init-esphome` script creates project folders, ready-set-up to perform profe
 All configuration is folder-scoped, and is anulled on folder erasure.
 
 The `install-init-esphome.sh` script downloads and installs the `init-esphome` command.
+<br>
 
 ![Button demo loop.](/images/button-demo-loop.gif)
 
