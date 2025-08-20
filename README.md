@@ -13,7 +13,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 The version of Python needed to run ESPHome may change over time. Check the installation guide to see which specific Python version you'll need to run ESPHome. 
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
 
-At the time of writing, ESPHome required Python version 3.10.
+At the time of writing, ESPHome required Python version 3.11.
 ```
 python3 --version
   Python 3.9.18    ✗ 
