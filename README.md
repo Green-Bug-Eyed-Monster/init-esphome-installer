@@ -44,13 +44,13 @@ apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
 ```
 Add required Python release as an alternative version of python3.
 ```
-sudo apt install python3.10
+sudo apt install python3.11
 ```
 Make it selectable via the update-alternatives system.
 ```
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 ```
-To select the Python version you want to use (e.g., Python 3.10), run:
+To select the Python version you want to use (e.g., Python 3.11), run:
 ```
 sudo update-alternatives --config python3
 ```
@@ -69,14 +69,14 @@ There are 4 choices for the alternative python3 (providing /usr/bin/python3).
 ```
 Then type the number corresponding to /usr/bin/python3.10 and press Enter.
 ```
-1
+2
 ```
 This selects which Python version runs when you type `python3`.
 
 Again check that your Linux distribution has the requisite Python3 version installed, as well selected in the update-alternatives system.
 ```
 python3 --version
-Python 3.10.12   ✓
+Python 3.11.11   ✓
 ```
 <br>
 
