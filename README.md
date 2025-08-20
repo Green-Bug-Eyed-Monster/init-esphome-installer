@@ -82,7 +82,7 @@ Python 3.11.11   ✓
 ```
 <br>
 
-**Install Microsoft Visual Studio Code if necessary...**
+**Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
 ```
