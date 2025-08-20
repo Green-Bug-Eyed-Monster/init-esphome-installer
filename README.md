@@ -9,7 +9,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 
 ![Button demo loop.](/images/button-demo-loop.gif)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cfvlnf9PLuQ" frameborder="0" allowfullscreen></iframe>
+[![Watch the video](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png)](https://www.youtube.com/watch?v=Cfvlnf9PLuQ)
 
 ### Prerequisites
 The version of Python needed to run ESPHome may change over time. Check the installation guide to see which specific Python version you'll need to run ESPHome. 
