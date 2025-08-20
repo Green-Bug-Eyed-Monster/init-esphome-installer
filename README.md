@@ -9,7 +9,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 
 ![Button demo loop.](/images/button-demo-loop.gif)
 
-### init-esphome is featured in: ‘Blinky for ESPHome – using init-asphome’.
+### init-esphome is featured in: ‘Blinky for ESPHome – using init-esphome’.
 
 [![Watch the video](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png)](https://www.youtube.com/watch?v=Cfvlnf9PLuQ)
 
