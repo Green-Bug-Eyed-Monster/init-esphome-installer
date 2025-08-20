@@ -115,7 +115,7 @@ It will create the target folder if it does not already exist, then populate it 
 ```
 init-esphome <target-folder>
 ```
-
+<br>
 
 ### Removal
 To remove the `init-esphome` command script from your ~/.local/bin folder completely, just run the following shell command.[^1]
