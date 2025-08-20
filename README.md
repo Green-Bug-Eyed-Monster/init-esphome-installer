@@ -6,6 +6,8 @@ All configuration is folder-scoped, and is anulled on folder erasure.
 
 The `install-init-esphome.sh` script downloads and installs the `init-esphome` command.
 
+![Button demo loop.](/images/button-demo-loop.gif)
+
 ### Prerequisites
 The version of Python needed to run ESPHome may change over time. Check the installation guide to see which specific Python version you'll need to run ESPHome. 
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
