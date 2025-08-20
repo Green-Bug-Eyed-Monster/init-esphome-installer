@@ -6,6 +6,7 @@ All configuration is local to any project folder generated, and is thus annulled
 
 The `install-init-esphome.sh` script downloads and installs the `init-esphome` command.
 <br>
+<br>
 
 ![Button demo loop.](/images/button-demo-loop.gif)
 
