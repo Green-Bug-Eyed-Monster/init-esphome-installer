@@ -1,7 +1,6 @@
 #!/bin/bash 
 
 # Script that installs the init-esphome command locally
-
 # Copyright © 2025, green@bug-eyed.monster
 # License: MIT
 
