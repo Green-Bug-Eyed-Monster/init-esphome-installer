@@ -34,7 +34,7 @@ On some systems, the `python` and `python3` commands may not point to the versio
 If Python 3.11 is already installed, it’s likely that python3.11-venv is not. To ensure both are correctly set up, you can safely re-install or update them using your package manager. Existing installations will be refreshed, and missing components will be added.
 <br>
 
-**Update Python if necessary...**
+**Add or update python3.11 and python3.11-venv.**
 
 Add the software-properties-common package for the add-apt-repository command,
 if not already installed.
@@ -47,46 +47,17 @@ Add the deadsnakes PPA (Personal Package Archive), and update local package list
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 ```
-Check current system's available package lists for all available python3 versions.
+Check current system's available package lists to see if python3.11 is available.
 ```
 apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
 ```
-Add required Python release as an alternative version of python3.
+Install Python 3.11 and the isolated virtual environment module.
 ```
-sudo apt install python3.11
+sudo apt install python3.11 python3.11-venv
 ```
-Make it selectable via the update-alternatives system.
-```
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-```
-To select the Python version you want to use (e.g., Python 3.11), run:
-```
-sudo update-alternatives --config python3
-```
-You’ll see an output like this:
-```
-There are 4 choices for the alternative python3 (providing /usr/bin/python3).
 
-  Selection    Path                 Priority   Status
-------------------------------------------------------------
-  0            /usr/bin/python3.11   1         auto mode
-  1            /usr/bin/python3.10   1         manual mode
-  2            /usr/bin/python3.11   1         manual mode
-  3            /usr/bin/python3.14   1         manual mode
-* 4            /usr/bin/python3.9    1         manual mode
 
-```
-Then type the number corresponding to /usr/bin/python3.10 and press Enter.
-```
-2
-```
-This selects which Python version runs when you type `python3`.
 
-Again check that your Linux distribution has the requisite Python3 version installed, as well selected in the update-alternatives system.
-```
-python3 --version
-Python 3.11.11   ✓
-```
 <br>
 
 **Install Microsoft Visual Studio Code**
