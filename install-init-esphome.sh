@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/bash 
 
 # Script that installs the init-esphome command locally
+
 # Copyright © 2025, green@bug-eyed.monster
 # License: MIT
 
-# Usage:
 # curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 
 FOLDER="$HOME/.local/bin"
@@ -21,10 +21,7 @@ curl -fsSL -o "$SCRIPT_PATH" "$SCRIPT_URL"
 chmod +x "$SCRIPT_PATH"
 
 # 4. Add folder to PATH *only if not already in PATH*
-FOLDER_REALPATH="$(realpath -m "$FOLDER")"
-NORMALIZED_PATH="$(echo "$PATH" | tr ':' '\n' | xargs realpath -m 2>/dev/null | paste -sd ':' -)"
-
-if [[ ":$NORMALIZED_PATH:" != *":$FOLDER_REALPATH:"* ]]; then
+if [[ ":$PATH:" != *":$FOLDER:"* ]]; then
     echo "Adding $FOLDER to PATH..."
     echo "export PATH=\"$FOLDER:\$PATH\"" >> ~/.bashrc
     export PATH="$FOLDER:$PATH"
