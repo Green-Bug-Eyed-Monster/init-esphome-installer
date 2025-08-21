@@ -51,7 +51,7 @@ echo -e "\n$SEPARATOR\n\n"
 echo -e "  ${BOLD}Installation is complete.${NC}\n"
 echo -e "  Your ${LIME_GREEN}init-esphome${NC} command has been installed to:"
 echo -e "    ${SCRIPT_PATH}"
-echo -e "  ${BRIGHT_RED}To apply changes, run${NC}: source ~/.bashrc or open a new terminal / reboot."
+echo -e "  ${BRIGHT_RED}To apply changes${NC}, run: source ~/.bashrc or open a new terminal / reboot."
 echo -e
 echo -e "  You can now run the ${LIME_GREEN}init-esphome${NC} command from anywhere. It will:"
 echo -e
