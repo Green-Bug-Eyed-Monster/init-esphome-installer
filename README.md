@@ -47,10 +47,6 @@ Then add the deadsnakes PPA (Personal Package Archive), and update local package
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 ```
-Check current system's available package lists to see if python3.11 is available.
-```
-apt list -a 2>/dev/null | grep -E '^python3\.[0-9]+/' | cut -d/ -f1 | sort -Vu
-```
 Install Python 3.11 and it's isolated virtual environment module.
 ```
 sudo apt install python3.11 python3.11-venv
