@@ -50,7 +50,7 @@ SEPARATOR="${BRIGHT_YELLOW}=====================================================
 echo -e "\n$SEPARATOR\n\n"
 echo -e "  ${BOLD}Installation is complete.${NC}\n"
 echo -e "  Your ${LIME_GREEN}init-esphome${NC} command has been installed to:"
-echo -e "                       ${SCRIPT_PATH}"
+echo -e "    ${SCRIPT_PATH}"
 echo -e
 echo -e "  ${BRIGHT_RED}To apply changes${NC}, run: source ~/.bashrc or open a new terminal / reboot."
 echo -e
