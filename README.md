@@ -35,7 +35,7 @@ If Python 3.11 is already installed, it’s likely that python3.11-venv is not. 
 <br>
 <br>
 
-**Add or update of python3.11 and python3.11-venv, by idempotent overwrite sequence.**
+**Add or update of python3.11 and python3.11-venv, by idempotent overwrite sequence:**
 
 First add the software-properties-common package for the add-apt-repository command,
 if not already installed.
