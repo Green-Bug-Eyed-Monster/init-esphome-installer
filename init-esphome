@@ -2,6 +2,8 @@
 
 # init-esphome command that builds an ESPHome development environment
 
+# Version: 0.1 - for Python3.11
+
 # Copyright © 2025 Green.Bug-Eyed.Monster
 
 # License:
@@ -33,6 +35,19 @@
 
 # Exit on any error
 set -e
+
+# Check for required packages
+REQUIRED_PACKAGES=("python3.11" "python3.11-venv")
+
+for pkg in "${REQUIRED_PACKAGES[@]}"; do
+    if ! dpkg -s "$pkg" &> /dev/null; then
+        echo "Error: Package '$pkg' is not installed."
+        echo "Please install it using: sudo apt install $pkg"
+        exit 1
+    fi
+done
+
+echo "All required packages are installed."
 
 # Get the target folder from the first argument
 TARGET_DIR="$1"
@@ -66,8 +81,9 @@ python3.11 -m venv venv
 source venv/bin/activate
 
 # Install ESPHome and dependencies
+pip3 install wheel
 pip3 install esphome
-pip install tornado esptool
+pip3 install tornado esptool
 
 deactivate
 
