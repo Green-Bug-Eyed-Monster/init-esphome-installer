@@ -57,6 +57,7 @@ sudo apt install python3.11 python3.11-venv
 ```
 You now have all the Python 3.11 requisites.
 <br>
+<br>
 
 **Install Microsoft Visual Studio Code**
 
