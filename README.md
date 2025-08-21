@@ -55,7 +55,7 @@ Install Python 3.11 and it's isolated virtual environment module.
 ```
 sudo apt install python3.11 python3.11-venv
 ```
-You now have all the Python 3.11 requisites.
+You now have all the Python 3.11 prerequisites.
 <br>
 <br>
 
