@@ -88,6 +88,12 @@ sudo apt install git curl
 ```
 <br>
 
+As neither Ubuntu 22.04 of 24.04 have an entry for `python`, which PlatformIO needs, we'll install python-is-python3.
+```
+sudo apt install python-is-python3
+```
+
+
 ### Installation
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
