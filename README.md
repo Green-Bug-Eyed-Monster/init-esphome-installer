@@ -37,13 +37,13 @@ If Python 3.11 is already installed, it’s likely that python3.11-venv is not. 
 
 **Add or update python3.11 and python3.11-venv (by idempotent overwrite sequence).**
 
-Add the software-properties-common package for the add-apt-repository command,
+First add the software-properties-common package for the add-apt-repository command,
 if not already installed.
 ```
 sudo apt update
 sudo apt install software-properties-common
 ```
-Add the deadsnakes PPA (Personal Package Archive), and update local package lists.
+Then add the deadsnakes PPA (Personal Package Archive), and update local package lists.
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
