@@ -53,14 +53,12 @@ echo -e "  ${BOLD}Installation is complete.${NC}\n"
 echo -e "  Your ${LIME_GREEN}init-esphome${NC} command has been installed to:"
 echo -e "  ${SCRIPT_PATH}"
 echo -e
-echo -e
 echo -e "  You can now run the ${LIME_GREEN}init-esphome${NC} command from anywhere. It will:"
 echo -e
 echo -e "    - Create the target folder (if it doesn’t already exist)"
 echo -e "    - Set up everything needed for professional IoT development, including:"
 echo -e "        - The ESPHome framework"
 echo -e "        - A pre-configured Visual Studio Code environment"
-echo -e
 echo -e
 echo -e "  ${BOLD}Usage:${NC} ${LIME_GREEN}init-esphome${NC} <target-folder>"
 echo -e "\n   👽\n"
