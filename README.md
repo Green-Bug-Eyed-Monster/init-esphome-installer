@@ -81,7 +81,7 @@ To install the `init-esphome` command script in your ~/.local/bin folder, creati
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
 > [!NOTE]
-> These are open-source resources, fully available for inspection.
+> This is free open-source software, fully available for inspection.
 > If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script, before running the installer.
 <br>
 
