@@ -34,7 +34,7 @@ On some systems, the `python` and `python3` commands may not point to the versio
 If Python 3.11 is already installed, it’s likely that python3.11-venv is not. To ensure both are correctly set up, you can safely re-install or update them using your package manager. Existing installations will be refreshed, and missing components will be added.
 <br>
 
-**Add or update python3.11 and python3.11-venv. (An idempotent overwrite.)**
+**Add or update python3.11 and python3.11-venv (by idempotent overwrite).**
 
 Add the software-properties-common package for the add-apt-repository command,
 if not already installed.
