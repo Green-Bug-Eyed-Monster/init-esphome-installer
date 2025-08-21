@@ -23,8 +23,20 @@ The version of Python needed to run ESPHome may change over time. Check the inst
 At the time of writing, ESPHome required Python version 3.11.
 ```
 python3 --version
-  Python 3.9.18    ✗ 
+  Python 3.9.18     ✗ 
 ```
+```
+python3 --version
+  Python 3.10.12    ✗ 
+```
+On a hypothetical example system, neither command `python` nor `python3` may link to the version of esphome required to run esphome.
+These links are for legacy scripts and system utilities, respectively. We employ an isolated Python virtual environment in our folder,
+within which we can run esphome using python3.11. Thus we avoid contending with the `python` or `python3` links, or any of the scripts and 
+utilities that may depend upon them. To do this we need only have Python 3.11 installed, and not necessarily linked from anywhere.
+
+If you do have python3.11 installed on your system, then it is most likely it won't also have python3.11-venv.
+To make sure you have the latest version of each, attempt to over-install all of the following. 
+Existing entities are safely, repeatably refreshed, whilst non existing entities installed.
 <br>
 
 **Update Python if necessary...**
