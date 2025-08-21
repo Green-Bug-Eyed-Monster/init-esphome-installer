@@ -73,6 +73,9 @@ sudo apt install code
 ### Installation
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
+> [!WARNING]
+> This is beta software under development, and will likely not work for you.
+> Please come back when this notice has been removed.
 ```
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
