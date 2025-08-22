@@ -49,7 +49,7 @@ sudo apt update
 ```
 Install Python 3.11 and it's isolated virtual environment module.
 ```
-sudo apt install python3.11 python3.11-venv
+sudo apt install python3.11 python3.11-venv python3-pip
 ```
 Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
@@ -61,11 +61,21 @@ sudo apt install python3.11 python3.11-venv python3-pip
 ```
 You now have all the Python 3.11 prerequisites.
 <br>
+
+Pre-installing code extensions is a reliable way to avoid many extension-related Python detection issues.
+```
+pip3 install --upgrade platformio esphome
+```
 <br>
 
 **Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
+```
+sudo apt update
+sudo apt install code
+```
+
 ```
 sudo apt update
 sudo apt install wget gpg -y
