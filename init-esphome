@@ -910,7 +910,8 @@ chmod a-w documents/README.md    # Make file read-only
 echo "documents/README.md written."
 
 
-
+# Load environment variables from shell profile
+source ~/.bashrc
 
 # Open project folder in Visual Studio Code
 
