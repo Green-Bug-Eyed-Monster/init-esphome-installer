@@ -370,15 +370,18 @@ cat > .vscode/settings.json <<'EOF'
 #"python.defaultInterpreterPath": "/usr/bin/python3",
 #"python.terminal.activateEnvironment": false,
 
-{
-  "python.defaultInterpreterPath": "/usr/bin/python3",
-  "platformio.pythonPath": "/usr/bin/python3",
-  "terminal.integrated.env.linux": {
-    "PYTHONEXEPATH": "/usr/bin/python3"
-},
+#{
+#  "python.defaultInterpreterPath": "/usr/bin/python3",
+#  "platformio.pythonPath": "/usr/bin/python3",
+#  "terminal.integrated.env.linux": {
+#    "PYTHONEXEPATH": "/usr/bin/python3"
+#},
 
-"python.venvPath": "",
-"python.venvFolders": []
+#"python.venvPath": "",
+#"python.venvFolders": []
+
+"python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+"python.terminal.activateEnvironment": true
 
 }
 EOF
