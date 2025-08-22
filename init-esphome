@@ -365,7 +365,8 @@ cat > .vscode/settings.json <<'EOF'
     "*.md": "vscode.markdown.preview.editor",
   }
 
-"python.defaultInterpreterPath": "/usr/bin/python3.11"
+"python.defaultInterpreterPath": "/usr/bin/python3.11",
+"python.terminal.activateEnvironment": false
 
 }
 EOF
