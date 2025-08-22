@@ -55,6 +55,7 @@ Or, for brevity, you may paste the preceding sequence at once at the command pro
 ```
 sudo apt update
 sudo apt install software-properties-common
+sudo add-apt-repository universe
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3-pip
