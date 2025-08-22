@@ -719,6 +719,7 @@ cat > .vscode/extensions.json <<'EOF'
 // Were this file processed with a strict JSON parser it would fail, yet VS Code's jsonc parser allows the comments.
 {
   "recommendations": [
+    "ms-python.python",            // Makes $PYTHONEXEPATH available to PlatformIO and ESPHome extensions.
     "platformio.platformio-ide",   // PlatformIO - Your Gateway to Embedded Software Development Excellence.
     "esphome.esphome-vscode",      // ESPHome - Continuous validation of ESPHome configuration files.
                                    //         - Key tootltips for description and documentation links.
