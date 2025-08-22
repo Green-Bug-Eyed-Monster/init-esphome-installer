@@ -365,10 +365,6 @@ cat > .vscode/settings.json <<'EOF'
     "*.md": "vscode.markdown.preview.editor",
   }
 
-"python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
-"python.terminal.activateEnvironment": true,
-"platformio.pythonPath": "${workspaceFolder}/venv/bin/python"
-
 }
 EOF
 
