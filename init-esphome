@@ -364,6 +364,9 @@ cat > .vscode/settings.json <<'EOF'
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor",
   }
+
+"python.defaultInterpreterPath": "/usr/bin/python3.11"
+
 }
 EOF
 
@@ -371,7 +374,7 @@ echo ".vscode/settings.json written."
 
 
 
-# Write shell script to settings.json
+# Write shell script to .vscode/run_esphome_wizard.sh
 
 cat > .vscode/run_esphome_wizard.sh <<'EOF'
 #!/usr/bin/env bash
