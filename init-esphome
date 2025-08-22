@@ -365,10 +365,13 @@ cat > .vscode/settings.json <<'EOF'
     "*.md": "vscode.markdown.preview.editor",
   }
 
-"platformio.pythonPath": "/usr/bin/python3",
+#"platformio.pythonPath": "/usr/bin/python3",
 
-"python.defaultInterpreterPath": "/usr/bin/python3",
-"python.terminal.activateEnvironment": false
+#"python.defaultInterpreterPath": "/usr/bin/python3",
+#"python.terminal.activateEnvironment": false,
+
+"python.venvPath": "",
+"python.venvFolders": []
 
 }
 EOF
