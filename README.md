@@ -56,6 +56,7 @@ To ensure you have git and curl installed and up to date, then install these pac
 sudo apt install git curl
 ```
 <br>
+
 Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
 sudo apt update
