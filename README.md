@@ -72,6 +72,8 @@ pip3 install --upgrade platformio esphome
 **Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
+> [!WARNING]
+> This should only be done once on any system, so make sure you don't have it already.
 ```
 sudo apt update
 sudo apt install code
@@ -103,7 +105,7 @@ sudo apt install git curl
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
 > [!WARNING]
-> This is beta software under development, and will likely not work for you.
+> This is beta software under development, and will likely not work for you. Actually, let's not even call it alpha, and say it definitely won't work for anyone.
 > Please come back when this notice has been removed.
 ```
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
