@@ -55,6 +55,7 @@ To ensure you have git and curl installed and up to date, then install these pac
 ```
 sudo apt install git curl
 ```
+
 Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
 sudo apt update
@@ -71,8 +72,6 @@ You now have all the Python 3.11 prerequisites.
 **Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
-> [!WARNING]
-> This should only be done once on any system, so make sure you don't have it already.
 ```
 sudo apt update
 sudo apt install wget gpg -y
