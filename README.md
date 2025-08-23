@@ -57,11 +57,16 @@ sudo apt install code
 <br>
 <br>
 
-**Add your username to the dialout group, to gain tty (USB) device access**
+**Add your username to the dialout group, to gain tty (USB/Serial) device access**
 ```
 sudo usermod -a -G dialout <your_username>
 ```
 To effect this change, now do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
+
+An impermanent method to gain the necessary device permissions without rebooting:
+```
+sudo chmod a+rw /dev/ttyUSB0
+```
 <br>
 <br>
 
