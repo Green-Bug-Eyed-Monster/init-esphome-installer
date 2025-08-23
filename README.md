@@ -57,6 +57,14 @@ sudo apt install code
 <br>
 <br>
 
+**Add your username to the dialout group, to gain tty (USB) device access**
+```
+sudo usermod -a -G dialout <your_username>
+```
+Now do a full session logout, to effect this change.
+<br>
+<br>
+
 ### Installation
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
