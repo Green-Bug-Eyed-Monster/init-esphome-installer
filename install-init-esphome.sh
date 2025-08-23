@@ -27,7 +27,7 @@ if [[ ":$PATH:" != *":$FOLDER:"* ]]; then
 fi
 
 # 5. Tell PlatformIO which Python3 to use.
-echo 'export PYTHONEXEPATH=/usr/bin/python3.11' >> ~/.bashrc
+#echo 'export PYTHONEXEPATH=/usr/bin/python3.11' >> ~/.bashrc
 
 # 6. Reload the shell (but only if this is an interactive shell)
 if [[ $- == *i* ]]; then
