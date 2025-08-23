@@ -55,7 +55,6 @@ sudo apt update
 sudo apt install code
 ```
 <br>
-<br>
 
 **Add your username to the dialout group, to gain tty (USB/Serial) device access**
 ```
