@@ -62,7 +62,7 @@ sudo usermod -a -G dialout <your_username>
 ```
 To effect this change, do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 
-An impermanent method to gain the same device permissions as above without rebooting:
+An method to temporarily gain the same device permissions as above without rebooting:
 ```
 sudo chmod a+rw /dev/ttyUSB0
 ```
