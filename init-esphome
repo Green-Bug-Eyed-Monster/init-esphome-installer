@@ -83,7 +83,6 @@ source venv/bin/activate
 # Install ESPHome and dependencies
 pip3 install wheel
 pip3 install esphome
-pip3 install platformio
 pip3 install tornado esptool
 
 deactivate
