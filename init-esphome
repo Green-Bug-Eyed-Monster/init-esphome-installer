@@ -916,9 +916,6 @@ echo "documents/README.md written."
 # Load environment variables from shell profile
 source ~/.bashrc
 
-# Activate Python virtual environment
-#source venv/bin/activate
-
 # Open project folder in Visual Studio Code
 
-#code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
+code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
