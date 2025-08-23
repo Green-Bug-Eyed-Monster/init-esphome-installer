@@ -60,13 +60,7 @@ sudo apt install code
 ```
 sudo usermod -a -G dialout <your_username>
 ```
-To effect this change, do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
-
-An method to temporarily gain the same device permissions as above without rebooting:
-```
-sudo chmod a+rw /dev/ttyUSB0
-```
-You may need to power-cycle any USB/Serial peripherals after each of the above changes.
+To effect this change, power-cycle any USB/Serial peripherals, then do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 <br>
 
 ### Installation
