@@ -62,6 +62,7 @@ sudo usermod -a -G dialout <your_username>
 ```
 To effect this change, power-cycle any USB/Serial peripherals, then do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 <br>
+<br>
 
 ### Installation
 
