@@ -921,4 +921,4 @@ source ~/.bashrc
 
 # Open project folder in Visual Studio Code
 
-code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
+#code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
