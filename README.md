@@ -61,7 +61,7 @@ sudo apt install code
 ```
 sudo usermod -a -G dialout <your_username>
 ```
-Now do a full session logout, to effect this change. You must either reboot, or log right out of Linux, then log back in again.
+To effect this change, now do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 <br>
 <br>
 
