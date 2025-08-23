@@ -60,7 +60,7 @@ sudo apt install code
 ```
 sudo usermod -a -G dialout <your_username>
 ```
-To effect this change, now do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
+To effect this change, do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 
 An impermanent method to gain the same device permissions as above without rebooting:
 ```
