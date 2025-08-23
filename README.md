@@ -100,13 +100,13 @@ sudo apt install git curl
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
 > [!WARNING]
-> This is beta software under development, and will likely not work for you. Actually, let's not even call it alpha, and say it definitely won't work for anyone.
+> This is beta software under development, and will likely not work for you. Actually, let's not call it beta, or even alpha, and say it definitely won't work for anyone.
 > Please come back when this notice has been removed.
 ```
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
 > [!NOTE]
-> This is fully open-source software, freely available for inspection.
+> This is fully open-source software, made freely available for inspection.
 > If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script, before running the installer.
 <br>
 
