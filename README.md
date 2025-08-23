@@ -76,11 +76,6 @@ If you don't already have Microsoft Visual Studio Code installed, then add the r
 > This should only be done once on any system, so make sure you don't have it already.
 ```
 sudo apt update
-sudo apt install code
-```
-
-```
-sudo apt update
 sudo apt install wget gpg -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
