@@ -66,6 +66,7 @@ An method to temporarily gain the same device permissions as above without reboo
 ```
 sudo chmod a+rw /dev/ttyUSB0
 ```
+You may need to power-cycle any USB/Serial peripherals after each of the above changes.
 <br>
 
 ### Installation
