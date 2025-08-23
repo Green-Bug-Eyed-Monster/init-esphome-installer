@@ -55,7 +55,7 @@ To ensure you have git and curl installed and up to date, then install these pac
 ```
 sudo apt install git curl
 ```
-
+<br>
 Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
 sudo apt update
@@ -67,6 +67,7 @@ sudo apt install python3.11 python3-venv python3.11-venv python3-pip
 sudo apt install git curl
 ```
 You now have all the Python 3.11 prerequisites.
+<br>
 <br>
 
 **Install Microsoft Visual Studio Code**
