@@ -51,6 +51,10 @@ Install Python 3.11 and it's isolated virtual environment module.
 ```
 sudo apt install python3.11 python3-venv python3.11-venv python3-pip
 ```
+To ensure you have git and curl installed and up to date, then install these packages.
+```
+sudo apt install git curl
+```
 Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
 sudo apt update
@@ -59,14 +63,9 @@ sudo add-apt-repository universe
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.11 python3-venv python3.11-venv python3-pip
+sudo apt install git curl
 ```
 You now have all the Python 3.11 prerequisites.
-<br>
-
-Pre-installing code extensions is a reliable way to avoid many extension-related Python detection issues.
-```
-pip3 install --upgrade platformio esphome
-```
 <br>
 
 **Install Microsoft Visual Studio Code**
@@ -86,14 +85,6 @@ sudo apt update
 sudo apt install code
 ```
 <br>
-
-**Install git and curl**
-
-To ensure you have git and curl installed and up to date, then install these packages.
-```
-sudo apt update
-sudo apt install git curl
-```
 <br>
 
 ### Installation
