@@ -21,43 +21,12 @@ The version of Python needed to run ESPHome may change over time. Check the inst
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
 
 At the time of writing, ESPHome required Python version 3.11.
-```
-python --version
-  Python 3.9.18     ✗ 
-```
-```
-python3 --version
-  Python 3.10.12    ✗ 
-```
-As above, on some systems, the `python` and `python3` commands may not point to the version of Python required to run ESPHome. These commands are often reserved for legacy scripts or system utilities use, respectively. To avoid interfering with them, `init-esphome` uses an isolated Python virtual environment within target project folders, running ESPHome via python3.11. This approach sidesteps any conflicts with system-wide Python links or dependencies. The only requirement is that Python 3.11 is installed...it doesn’t need to be linked globally.
 
-If Python 3.11 is already installed, it’s likely that python3.11-venv is not. To ensure both are correctly set up, you can safely re-install or update them using your package manager. Existing installations will be refreshed, and missing components will be added.
-<br>
-<br>
+Created project folders have an isolated Python virtual environment, matched to suit the requirements of ESPHome, and distinct from any other Python installation. The prototypical Python version must first be made available, before the isolated 
+Python virtual environment can later be created. The specific version of Python is installed, but not made active. System-wide Python configuration is safely left intact.
 
 **Add or update of python3.11 and python3.11-venv, by idempotent overwrite sequence:**
 
-First add the software-properties-common package for the add-apt-repository command.
-```
-sudo apt update
-sudo apt install software-properties-common
-```
-Then add the deadsnakes PPA (Personal Package Archive), and update local package lists.
-```
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-```
-Install Python 3.11 and it's isolated virtual environment module.
-```
-sudo apt install python3.11 python3-venv python3.11-venv python3-pip
-```
-To ensure you have git and curl installed and up to date, then install these packages.
-```
-sudo apt install git curl
-```
-<br>
-
-Or, for brevity, you may paste the preceding sequence at once at the command prompt:
 ```
 sudo apt update
 sudo apt install software-properties-common
