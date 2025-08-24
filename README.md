@@ -23,7 +23,7 @@ The version of Python needed to run ESPHome may change over time. Check the inst
 At the time of writing, ESPHome required Python version 3.11.
 
 Created project folders have an isolated Python virtual environment, matched to suit the requirements of ESPHome, and distinct from any other Python installation. The prototypical Python version must first be made available, before the isolated 
-Python virtual environment can later be created. The specific version of Python is installed, but not made active. System-wide Python configuration is thus left safely unaltered.
+Python virtual environment can later be created. The specified version of Python is installed, but not made active. System-wide Python configurations are thus left safely intact.
 
 **Add python3.11-venv and update/install python3.11**
 
