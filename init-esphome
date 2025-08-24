@@ -366,9 +366,12 @@ cat > .vscode/settings.json <<'EOF'
     "*.md": "vscode.markdown.preview.editor",
   },
 
-  "python.terminal.activateEnvironment": false,
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+  "python.terminal.activateEnvironment": true,
   "platformio-ide.useBuiltinPython": false,
-  "esphome.esphomePath": "/usr/local/bin/esphome"
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500
 
 }
 EOF
