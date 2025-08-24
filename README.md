@@ -56,7 +56,7 @@ sudo apt install code -y
 ```
 <br>
 
-**Add your username to the dialout group, to gain tty (USB/Serial) device access**
+**Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access**
 ```
 sudo usermod -a -G dialout <your_username>
 ```
