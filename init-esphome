@@ -204,7 +204,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Error: Destination folder '$DEST' already exists.\" >&2; exit 1; else source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp ${file} \"$DEST/${fileBasename}.bak\" && code \"$DEST\"; fi"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Opening existing folder: $DEST\" && code \"$DEST\"; else source ./venv/bin/activate && esphome compile --only-generate ${file} && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp ${file} \"$DEST/${fileBasename}.bak\" && code \"$DEST\"; fi"
       ],
       "problemMatcher": []
     },
