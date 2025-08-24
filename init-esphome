@@ -402,6 +402,7 @@ fi
 
 # Activate venv and run
 source ./venv/bin/activate
+export VSCODE_PID=
 esphome wizard "$configFile"
 code "$configFile"
 EOF
