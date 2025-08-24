@@ -55,6 +55,15 @@ sudo apt update -y
 sudo apt install code -y
 ```
 <br>
+<br>
+
+**Install ESPHome globally**
+
+```
+sudo pip3 install esphome
+```
+
+<br>
 
 **Add your username to the dialout group, to gain tty (USB/Serial) device access**
 ```
