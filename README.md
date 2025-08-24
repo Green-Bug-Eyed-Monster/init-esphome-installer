@@ -53,9 +53,6 @@ https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d
 rm packages.microsoft.gpg
 sudo apt update -y
 sudo apt install code -y
-curl -L "https://www.vsixhub.com/vsix/8712/" -o /tmp/esphome.vsix
-code --install-extension /tmp/esphome.vsix --force
-rm /tmp/esphome.vsix
 ```
 <br>
 
