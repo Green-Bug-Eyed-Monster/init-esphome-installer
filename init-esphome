@@ -371,9 +371,7 @@ cat > .vscode/settings.json <<'EOF'
   "python.terminal.activateEnvironment": true,
   "platformio-ide.useBuiltinPython": false,
 
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 500
-
+  "files.autoSave": "off"
 }
 EOF
 
