@@ -366,7 +366,7 @@ cat > .vscode/settings.json <<'EOF'
     "*.md": "vscode.markdown.preview.editor",
   },
 
-  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvironment": false,
   "platformio-ide.useBuiltinPython": false
 
 }
