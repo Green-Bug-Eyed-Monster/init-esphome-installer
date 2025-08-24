@@ -204,7 +204,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "FILE=\"/home/vanluynm/ESPHome_projects/test/blinky-node.yaml\"; [[ \"$FILE\" != *.yaml ]] && { echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; }; DEST=./PlatformIO/blinky-node; if [ -d \"$DEST\" ]; then echo \"Opening existing folder: $DEST\" && code \"$DEST\"; else source ./venv/bin/activate && esphome compile --only-generate \"$FILE\" && deactivate && cp -r .esphome/build/blinky-node \"$DEST\" && cp \"$FILE\" \"$DEST/blinky-node.yaml.bak\" && mkdir -p \"$DEST/.vscode\" && echo \"{\\\"python.defaultInterpreterPath\\\": \\\"../../venv/bin/python\\\", \\\"platformio-ide.useBuiltinPython\\\": false, \\\"python.terminal.activateEnvironment\\\": true}\" > \"$DEST/.vscode/settings.json\" && code \"$DEST\"; fi"
+        "FILE=\"/home/vanluynm/ESPHome_projects/test/blinky-node.yaml\"; [[ \"$FILE\" != *.yaml ]] && { echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; }; DEST=./PlatformIO/blinky-node; if [ -d \"$DEST\" ]; then echo \"Opening existing folder: $DEST\" && code \"$DEST\"; else source ./venv/bin/activate && esphome compile --only-generate \"$FILE\" && deactivate && cp -r .esphome/build/blinky-node \"$DEST\" && cp \"$FILE\" \"$DEST/blinky-node.yaml.bak\" && mkdir -p \"$DEST/.vscode\" && printf \"{\\n  \\\"python.defaultInterpreterPath\\\": \\\"../../venv/bin/python\\\",\\n  \\\"platformio-ide.useBuiltinPython\\\": false,\\n  \\\"python.terminal.activateEnvironment\\\": true\\n}\\n\" > \"$DEST/.vscode/settings.json\" && code \"$DEST\"; fi"
       ],
       "problemMatcher": []
     },
@@ -349,7 +349,7 @@ cat > .vscode/settings.json <<'EOF'
         },
         {
           "label": "$(device-camera) Platformio Snapshot",
-          "task": "Open PlatformIO Snapshot",
+          "task": "Build and Open PlatformIO Project",
           "tooltip": "Generates a complete, standalone PlatformIO C++ project from your YAML file. This is for advanced users who want to modify the underlying C++ code. The new project is copied to the `PlatformIO/` directory in your workspace and opened in a new VS Code window. It prevents overwriting by checking if a project with the same name already exists."
         },
         {
