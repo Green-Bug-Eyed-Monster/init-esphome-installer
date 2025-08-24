@@ -28,13 +28,13 @@ Python virtual environment can later be created. The specific version of Python 
 **Add or update of python3.11 and python3.11-venv**
 
 ```
-sudo apt update
-sudo apt install software-properties-common
-sudo add-apt-repository universe
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-sudo apt install python3.11 python3-venv python3.11-venv python3-pip
-sudo apt install git curl
+sudo apt update -y
+sudo apt install -y software-properties-common
+sudo add-apt-repository -y universe
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt update -y
+sudo apt install -y python3.11 python3-venv python3.11-venv python3-pip
+sudo apt install -y git curl
 ```
 You now have all the Python 3.11 prerequisites.
 <br>
