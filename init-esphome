@@ -368,7 +368,7 @@ cat > .vscode/settings.json <<'EOF'
 
   "python.terminal.activateEnvironment": false,
   "platformio-ide.useBuiltinPython": false,
-  "esphome.esphomePath": "/usr/bin/esphome"
+  "esphome.esphomePath": "/usr/local/bin/esphome"
 
 }
 EOF
