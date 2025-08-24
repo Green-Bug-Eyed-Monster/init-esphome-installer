@@ -736,7 +736,7 @@ cat > .vscode/extensions.json <<'EOF'
   ],
   "unwantedRecommendations": [
     // Optional: block certain extensions from being recommended
-    "somepublisher.bad-extension"
+    "ms-vscode.cpptools-extension-pack"
   ]
 }
 EOF
