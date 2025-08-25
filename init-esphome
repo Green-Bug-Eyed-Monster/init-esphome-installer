@@ -456,8 +456,7 @@ substitutions:
   # This section specifies the microcontroller architectural platform.
   # Replace '<your_platform>' with your board's architecture, 
   # e.g., esp32, esp8266, bk72xx, ln882x, rtl87xx, rp2040, etc.
-<your_platform>:
-  board: $device_board
+  platform: <your_platform>
 
 # ===================================================================
 # Reusable Configuration with Packages
@@ -574,7 +573,6 @@ echo "secrets-form.yaml written."
 # Write to common/testing-config.yaml
 
 cat > common/testing-config.yaml <<'EOF'
-
 # ===================================================================
 # Core ESPHome Configuration
 # ===================================================================
@@ -585,6 +583,12 @@ esphome:
   friendly_name: $device_friendly_name
   # You can also add comments to your device configuration in Home Assistant.
   # comment: "This is a boilerplate ESPHome device."
+
+  # This section specifies the microcontroller architectural platform.
+  # Replace '<your_platform>' with your board's architecture, 
+  # e.g., esp32, esp8266, bk72xx, ln882x, rtl87xx, rp2040, etc.
+$platform:
+  board: $device_board
 
 # ===================================================================
 # Logging Configuration
