@@ -753,16 +753,17 @@ echo ".vscode/extensions.json written."
 # Write to documents/README.md
 
 cat > documents/README.md <<'EOF'
+
 # The init-esphome README
 
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
 
+The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks.
 
-
-- [VS Code Task Buttons](#vs-code-task-buttons)
+- [Task Buttons](#task-buttons)
 - [Known issues](#known-issues)
 
-## VS Code Task Buttons
+## Task Buttons
 
 This section describes the function of each custom task button available in the Visual Studio Code status bar for this init-esphome generated ESPHome project. These buttons provide convenient shortcuts for common development tasks.
 
@@ -928,6 +929,7 @@ It's not clear which of the ESPHome CLI <=2025.8.0, or the ESPHome Visual Studio
 ---
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 <br><small>Copyright © 2025 Green.Bug-Eyed.Monster</small>
+
 EOF
 
 chmod a-w documents/README.md    # Make file read-only
