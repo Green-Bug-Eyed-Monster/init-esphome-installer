@@ -47,7 +47,7 @@ for pkg in "${REQUIRED_PACKAGES[@]}"; do
     fi
 done
 
-echo "All required packages are installed."
+echo "All pre-requisite Python3 packages are available."
 
 # Get the target folder from the first argument
 TARGET_DIR="$1"
