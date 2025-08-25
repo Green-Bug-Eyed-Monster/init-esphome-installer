@@ -54,6 +54,9 @@ rm packages.microsoft.gpg
 sudo apt update -y
 sudo apt install code -y
 ```
+> [!NOTE]
+> This works on Ubuntu 22.04, but yields a broken installation on version 24.04.
+> I skipped the heartbreak on 24.04, and just used the App Center to install VS Code.
 <br>
 
 **Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access**
