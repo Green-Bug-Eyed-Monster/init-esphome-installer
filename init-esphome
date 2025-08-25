@@ -83,7 +83,7 @@ source venv/bin/activate
 # Install ESPHome and dependencies
 pip install --upgrade pip
 pip3 install wheel
-pip install esphome==2025.7.0
+pip install esphome==2025.8.0
 pip3 install platformio
 pip3 install tornado esptool
 
@@ -666,18 +666,30 @@ web_server:
   # username: "admin"
   # password: "your_password"
 
-# ===================================================================
-# MQTT (Message Queuing Telemetry Transport)
-# ===================================================================
-# MQTT is a lightweight messaging protocol for IoT devices.
-# It can be used as an alternative or in addition to the native API.
-# It's useful for integrating with systems other than Home Assistant.
-mqtt:
-  broker: !secret mqtt_broker
-  username: !secret mqtt_username
-  password: !secret mqtt_password
-  # You can customize the topic prefix for MQTT messages.
-  # topic_prefix: "esphome/$device_name"
+#
+# Enabling MQTT will result in innocuous AssertionError warnings,
+# which may be safely ignored.
+#
+# The communication between the ESPHome VS Code Extension, a Node.js runtime,
+# and the Python-based ESPHome Core Validator, may be fragile. It appears to
+# become disordered during syntax checking of the mqtt: integration key, 
+# producing the harmless, yet unavoidable AssertionError warnings in
+# Visual Studio Code's interface.
+#
+# # ===================================================================
+# # MQTT (Message Queuing Telemetry Transport)
+# # ===================================================================
+# # MQTT is a lightweight messaging protocol for IoT devices.
+# # It can be used as an alternative or in addition to the native API.
+# # It's useful for integrating with systems other than Home Assistant.
+# mqtt:
+#   broker: !secret mqtt_broker
+#   username: !secret mqtt_username
+#   password: !secret mqtt_password
+#   # You can customize the topic prefix for MQTT messages.
+#   # topic_prefix: "esphome/$device_name"
+#   discovery: true                    # Allows Home Assistant to auto-discover this device.
+#   discovery_prefix: "homeassistant"  # Optional, default is 'homeassistant'.
 EOF
 
 echo "common/testing-config.yaml written."
