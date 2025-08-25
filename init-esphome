@@ -668,13 +668,13 @@ web_server:
 
 #
 # Enabling MQTT will result in innocuous AssertionError warnings,
-# which may be safely ignored.
+# in the in Visual Studio Code interface, which may be safely ignored.
 #
-# The communication between the ESPHome VS Code Extension, a Node.js runtime,
-# and the Python-based ESPHome Core Validator, may be fragile. It appears to
-# become disordered during syntax checking of the mqtt: integration key, 
-# producing the harmless, yet unavoidable AssertionError warnings in
-# Visual Studio Code's interface.
+# The communication between the ESPHome VS Code Extension, a Node.js 
+# runtime, and the Python-based ESPHome Core Validator <=2025.8.0,
+# may be fragile. It appears to become disordered during continuous 
+# syntax checking of the mqtt: integration key, producing the harmless, 
+# yet unavoidable AssertionError warnings in Visual Studio Code.
 #
 # # ===================================================================
 # # MQTT (Message Queuing Telemetry Transport)
