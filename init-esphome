@@ -224,7 +224,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && esphome clean-mqtt ${file} && deactivate"
+        "if [[ \"${file}\" != *.yaml ]]; then echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; fi && source ./venv/bin/activate && (echo \"Cleaning-up MQTT\nCtrl-C when no more topics found.\" && esphome clean-mqtt \"${file}\" >/dev/null 2>&1 || echo \"Error: Integration key mqtt: not found in configuration.\") && deactivate"
       ],
       "problemMatcher": []
     },
