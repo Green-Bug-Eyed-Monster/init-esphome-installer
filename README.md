@@ -59,7 +59,7 @@ sudo apt install code -y
 > I skipped the heartbreak on 24.04, and just used the App Center to install VS Code.
 <br>
 
-**Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access**
+**Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing**
 ```
 sudo usermod -a -G dialout <your_username>
 ```
