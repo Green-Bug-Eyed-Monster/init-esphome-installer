@@ -448,16 +448,16 @@ substitutions:
   # A human-readable name for the device. This is what you'll see in the Home Assistant UI.
   device_friendly_name: "Boilerplate App"
 
-  # This section specifies the microcontroller architectural platform.
-  # Replace '<your_platform>' with your board's architecture, 
-  # e.g., esp32, esp8266, bk72xx, ln882x, rtl87xx, rp2040, etc.
-  platform: <your_platform>
-
   # The board you are using. This tells ESPHome how to compile the firmware.
   # Replace '<your_device_board>' with your actual board, e.g., 'nodemcuv2', 'd1_mini', 'esp32dev'.
   # A list of supported boards can be found at: https://esphome.io/components/esp8266.html or https://esphome.io/components/esp32.html
   device_board: <your_device_board>
 
+  # This section specifies the microcontroller architectural platform.
+  # Replace '<your_platform>' with your board's architecture, 
+  # e.g., esp32, esp8266, bk72xx, ln882x, rtl87xx, rp2040, etc.
+<your_platform>:
+  board: $device_board
 
 # ===================================================================
 # Reusable Configuration with Packages
@@ -498,7 +498,6 @@ packages:
 #     update_interval: 60s
 #
 # ===================================================================
-
 EOF
 
 chmod a-w boiler-plate.yaml    # Make file read-only
@@ -588,14 +587,6 @@ esphome:
   # comment: "This is a boilerplate ESPHome device."
 
 # ===================================================================
-# Hardware Platform Configuration
-# ===================================================================
-# This section specifies the microcontroller platform and board.
-# Supported platforms include: esp32, esp8266, rp2040, bk72xx, etc.
-$platform:
-  board: $device_board
-
-# ===================================================================
 # Logging Configuration
 # ===================================================================
 # The logger component prints log messages from the device.
@@ -668,7 +659,7 @@ web_server:
 
 #
 # Enabling MQTT will result in innocuous AssertionError warnings,
-# in the Visual Studio Code interface, which may be safely ignored.
+# in the in Visual Studio Code interface, which may be safely ignored.
 #
 # The communication between the ESPHome VS Code Extension, a Node.js 
 # runtime, and the Python-based ESPHome Core Validator <=2025.8.0,
