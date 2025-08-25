@@ -369,9 +369,8 @@ cat > .vscode/settings.json <<'EOF'
 
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": true,
-  "platformio-ide.useBuiltinPython": false,
+  "platformio-ide.useBuiltinPython": false
 
-  "files.autoSave": "off"
 }
 EOF
 
