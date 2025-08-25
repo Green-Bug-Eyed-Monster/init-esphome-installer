@@ -204,7 +204,7 @@ cat > .vscode/tasks.json <<'EOF'
       "command": "bash",
       "args": [
         "-c",
-        "FILE=\"/home/vanluynm/ESPHome_projects/test/blinky-node.yaml\"; [[ \"$FILE\" != *.yaml ]] && { echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; }; DEST=./PlatformIO/blinky-node; if [ -d \"$DEST\" ]; then echo \"Opening existing folder: $DEST\" && code \"$DEST\"; else source ./venv/bin/activate && esphome compile --only-generate \"$FILE\" && deactivate && cp -r .esphome/build/blinky-node \"$DEST\" && cp \"$FILE\" \"$DEST/blinky-node.yaml.bak\" && mkdir -p \"$DEST/.vscode\" && printf \"{\\n  \\\"python.defaultInterpreterPath\\\": \\\"../../venv/bin/python\\\",\\n  \\\"platformio-ide.useBuiltinPython\\\": false,\\n  \\\"python.terminal.activateEnvironment\\\": true\\n}\\n\" > \"$DEST/.vscode/settings.json\" && code \"$DEST\"; fi"
+        "[[ \"${file}\" != *.yaml ]] && { echo \"Error: Configuration .yaml file must be open and focused in the editor.\" >&2; exit 1; }; DEST=./PlatformIO/${fileBasenameNoExtension}; if [ -d \"$DEST\" ]; then echo \"Opening existing folder: $DEST\" && code \"$DEST\"; else source ./venv/bin/activate && esphome compile --only-generate \"${file}\" && deactivate && cp -r .esphome/build/${fileBasenameNoExtension} \"$DEST\" && cp \"${file}\" \"$DEST/${fileBasenameNoExtension}.yaml.bak\" && mkdir -p \"$DEST/.vscode\" && printf \"{\\n  \\\"python.defaultInterpreterPath\\\": \\\"../../venv/bin/python\\\",\\n  \\\"platformio-ide.useBuiltinPython\\\": false,\\n  \\\"python.terminal.activateEnvironment\\\": true\\n}\\n\" > \"$DEST/.vscode/settings.json\" && code \"$DEST\"; fi"
       ],
       "problemMatcher": []
     },
