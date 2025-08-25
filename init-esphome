@@ -753,7 +753,6 @@ echo ".vscode/extensions.json written."
 # Write to documents/README.md
 
 cat > documents/README.md <<'EOF'
-
 # The init-esphome README
 
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
@@ -924,12 +923,19 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 If ever the mqtt: integration key is present in the currently focused YAML configuration file, or in any configuration included from it, then in invoking various build tasks, a series of AssertionError warnings emit from 'ESPHome', and pop-up in the Visual Studio Code interface.
 
 It's not clear which of the ESPHome CLI <=2025.8.0, or the ESPHome Visual Studio extension <=2025.7.0 is most responsible, though attendant error messages indicate disorder in the communications between them both, whenever the mqtt: integration key is present.
+
+Whatever the case, these AssertionError warnings appear not to affect processing of ESPHome configurations, so these innocuous messages may be ignored.
+
+### ❌ 'Platform missing' syntax underlining in testing-config.yaml
+
+This occurs because the ESPHome CLI language engine appears to expect any configuration to be contained within a single YAML file. It anticipates that certain integration keys must occur in every file. Should you make use of packages or includes, then the syntax checker falsely indicates that there are keys missing in the configuration, even though they are present in linking files, and the configuration is complete.
+
+This erroneous language checker indication may be ignored.
 <br><br>
 
 ---
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 <br><small>Copyright © 2025 Green.Bug-Eyed.Monster</small>
-
 EOF
 
 chmod a-w documents/README.md    # Make file read-only
