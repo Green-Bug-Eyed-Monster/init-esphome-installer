@@ -753,16 +753,20 @@ echo ".vscode/extensions.json written."
 # Write to documents/README.md
 
 cat > documents/README.md <<'EOF'
-
-# The init-esphome VS Code Task Buttons README
+# The init-esphome README
 
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
 
-This document describes the function of each custom task button available in the Visual Studio Code status bar for this init-esphome generated ESPHome project. These buttons provide convenient shortcuts for common development tasks.
+
+
+- [VS Code Task Buttons](#vs-code-task-buttons)
+- [Known issues](#known-issues)
+
+## VS Code Task Buttons
+
+This section describes the function of each custom task button available in the Visual Studio Code status bar for this init-esphome generated ESPHome project. These buttons provide convenient shortcuts for common development tasks.
 
 **Note:** Most of these tasks require you to have the relevant ESPHome configuration file (e.g., `<node-name.yaml>`) open and focused in the editor.
-
----
 
 ### `Validate`
 
@@ -912,10 +916,18 @@ Upgrades the `esphome` package within the project's virtual environment to the l
 2.  Executes `pip install --upgrade esphome`.
 3.  Deactivates the virtual environment.
 <br><br>
+## Known issues
+
+### ❌ StdErr:^^^^^^^^^^^^^^^^^AssertionError
+
+If ever the mqtt: integration key is present in the currently focused YAML configuration file, or in any configuration included from it, then in invoking various build tasks, a series of AssertionError warnings emit from 'ESPHome', and pop-up in the Visual Studio Code interface.
+
+It's not clear which of the ESPHome CLI <=2025.8.0, or the ESPHome Visual Studio extension <=2025.7.0 is most responsible, though attendant error messages indicate disorder in the communications between them both, whenever the mqtt: integration key is present.
+<br><br>
+
 ---
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 <br><small>Copyright © 2025 Green.Bug-Eyed.Monster</small>
-
 EOF
 
 chmod a-w documents/README.md    # Make file read-only
