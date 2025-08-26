@@ -3,7 +3,7 @@
 
 <div align="center">
   <a href="https://green.bug-eyed.monster/">
-    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Centered Image" width="80%" />
+    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Centered Image" width="55%" />
   </a>
   <p><a href="https://example.com">Caption or description</a></p>
 </div>
