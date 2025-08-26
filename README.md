@@ -56,7 +56,7 @@ sudo apt install code -y
 ```
 > [!NOTE]
 > This works on Ubuntu 22.04, but may yield a broken installation on version 24.04.
-> I skipped the heartache on 24.04, and just used the App Center to install VS Code.
+> I skipped the heartache, and just used the App Center to install VS Code on Ubuntu 24.04.
 <br>
 
 **Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing.**
