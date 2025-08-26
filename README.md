@@ -85,7 +85,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 >- Ubuntu 24.04 ✓
 >- \<reports-please\> ✓
 >
->On these Linux releases it fails.
+>On these Linux releases it fails any of these.
 >
 >- \<reports-please\> ⨯
 >
