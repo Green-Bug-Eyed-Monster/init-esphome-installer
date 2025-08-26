@@ -20,7 +20,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 The version of Python3 needed to run ESPHome may change over time. Check the installation guide to see which specific Python3 version you'll need to run ESPHome. 
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
 
-At the time of writing, ESPHome required Python3 version 3.11.
+At the time of writing, ESPHome required Python3.11.
 
 Project folders created with this utility, contain an isolated Python3 virtual environment, matched to suit the requirements of ESPHome. This is distinct from any other system-wide Python3 installation. The prototype Python3 version must first be installed, before the isolated 
 Python3 virtual environment can later be created from it. The required version of Python3 is installed, but not made active. System-wide Python3 configurations are thus left safely unaltered.
