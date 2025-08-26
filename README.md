@@ -72,9 +72,9 @@ To effect this change, power-cycle any USB/Serial peripherals, then do a full se
 To install the `init-esphome` command script in your ~/.local/bin folder, possibly create the directory, and add it to your path if it's not found there, just run the following shell command.
 On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
 
--Ubuntu 22.04 ✓
--Ubuntu 24.04 ✓
--\<reports-please\> ✓
+- Ubuntu 22.04 ✓
+- Ubuntu 24.04 ✓
+- \<reports-please\> ✓
 
 On these Linux releases it fails.
 
