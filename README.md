@@ -90,7 +90,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 >
 >- Ubuntu 25.04 ⨯
 >  
-> - Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file.
+>  <sub>Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file.</sub>
 >- \<reports-please\> ⨯
 >
 <br>
