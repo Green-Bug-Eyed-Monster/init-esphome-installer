@@ -7,6 +7,7 @@
   </a>
   <p>Please visit <a href="https://green.bug-eyed.monster/">Green Bug-Eyed Monster</a>👽</p>
 </div>
+<br>
 
 The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks. 
 All configuration is local to any project folder generated, and is thus annulled on folder erasure.
