@@ -757,7 +757,7 @@ cat > documents/README.md <<'EOF'
 <!-- Copyright © 2025 Green.Bug-Eyed.Monster -->
 <p style="text-align: center;">
   <a href="https://green.bug-eyed.monster" target="_blank">
-    <img src="https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/images/title-monster.png" alt="Banner" style="width: 55%;">
+    <img src="https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/images/monster-banner.png" alt="Banner" style="width: 55%;">
   </a>
 </p>
 
