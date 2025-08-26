@@ -103,6 +103,6 @@ The path remains unaltered.[^2]
 
 Please visit [Green Bug-Eyed Monster](https://green.bug-eyed.monster/) 👽
 
-[^1]: Any first-run-downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the working folder. i.e. When the working folder is erased, all customisation is lost.
-[^2]: The ~/.local/bin path possibly set during installation, isn't removed in this step, as it may still be in use. The path ~/.local/bin refers to a folder commonly used for user-specific executable files, on many later Linux distributions.
+[^1]: Any first-run-downloaded Visual Studio Code extension recommendation has lasting, global effect. Conversely, all VS Code customisation is scoped to the project folder. i.e. When the project folder is erased, all customisation is lost.
+[^2]: The ~/.local/bin path possibly set during installation, isn't removed in this step, as it may still be in use. The path ~/.local/bin refers to a folder commonly used for user-specific executable files, on many contemporary Linux distributions.
 
