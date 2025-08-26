@@ -71,7 +71,7 @@ To effect this change, power-cycle any USB/Serial peripherals, then do a full se
 
 To install the `init-esphome` command script in your ~/.local/bin folder, creating the directory and adding it to your path if it does not already exist, just run the following shell command.
 > [!WARNING]
-> This is beta software under development, and may not work for you. It has been developed and tested on Ubuntu versions 22.04 and 24.04. On these, it appears to install, run well, and be able to be deleted without ill effect.
+> This is beta software under development, and may not work for you. It has been developed and tested on Ubuntu versions 22.04 and 24.04. On these, it appears to install, run correctly, and be able to be deleted without ill effect.
 ```
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
