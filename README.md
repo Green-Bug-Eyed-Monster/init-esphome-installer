@@ -29,7 +29,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
     <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png" alt="Video Image" width="60%" />
   </a>
   <br><br>
-  <p>Watch the <a href="https://www.youtube.com/watch?v=Cfvlnf9PLuQ">‘Blinky for ESPHome – using init-esphome’</a> video</p>
+  <p>Watch the <a href="https://www.youtube.com/watch?v=Cfvlnf9PLuQ">‘Blinky for ESPHome – using init-esphome’</a> video.</p>
 </div>
 
 ### Audience
