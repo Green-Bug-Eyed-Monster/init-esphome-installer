@@ -21,7 +21,6 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
   </a>
 </div>
 
-![Button demo loop.](/images/button-demo-loop.gif)
 <br>
 
 ### ⭐ init-esphome is featured in:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘Blinky for ESPHome – using init-esphome’
