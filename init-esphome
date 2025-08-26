@@ -931,9 +931,9 @@ Whatever the case, these AssertionError warnings appear not to affect processing
 
 ### ❌ 'Platform missing' syntax underlining in testing-config.yaml
 
-This occurs because the ESPHome CLI language engine appears to expect any configuration to be contained within a single YAML file. It anticipates that certain integration keys must occur in every file. Should you make use of packages or includes, then the syntax checker falsely indicates that there are keys missing in the configuration, even though they are present in linking files, and the configuration is complete.
+This occurs because the ESPHome CLI language engine expects any file or multi-file configuration to contain a single platform key. You will see this error when the syntax and language checker is evaluating this multi-file configuration, in which the value for platform:, and hence $platform, has not yet been substituted.
 
-This insignificant language checker indication may be ignored. The configuration validator task always gets multi-file configuration, syntax and language checks correct.
+This insignificant language checker indication may be ignored.
 <br><br>
 
 ---
