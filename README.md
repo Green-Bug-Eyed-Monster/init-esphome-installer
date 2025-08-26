@@ -4,7 +4,7 @@
 The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks. 
 All configuration is local to any project folder generated, and is thus annulled on folder erasure.
 
-The `install-init-esphome.sh` script downloads and installs the `init-esphome` command. The `init-esphome` script's removal is a one file deletion.
+The `install-init-esphome.sh` script downloads and installs the `init-esphome` command. The `init-esphome` script's removal comprises a one file deletion.
 <br>
 <br>
 
