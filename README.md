@@ -1,7 +1,9 @@
 # init-esphome-installer
 ## Repository for the init-esphome command and install-init-esphome.sh command installer.
 
+<div align="center">
 [![Visit the site.](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png)]([https://www.youtube.com/watch?v=Cfvlnf9PLuQ](https://green.bug-eyed.monster/))
+</div>
 
 The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks. 
 All configuration is local to any project folder generated, and is thus annulled on folder erasure.
