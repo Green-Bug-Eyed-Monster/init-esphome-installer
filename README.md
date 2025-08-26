@@ -28,11 +28,10 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
   <a href="https://www.youtube.com/watch?v=Cfvlnf9PLuQ">
     <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png" alt="Video Image" width="60%" />
   </a>
+  <br>
   <p>Watch the <a href="https://www.youtube.com/watch?v=Cfvlnf9PLuQ">‘Blinky for ESPHome – using init-esphome’</a> video</p>
 </div>
-### ⭐ init-esphome is featured in:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘Blinky for ESPHome – using init-esphome’
 
-[![Watch the video](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png)](https://www.youtube.com/watch?v=Cfvlnf9PLuQ)
 <br>
 
 ### Prerequisites
