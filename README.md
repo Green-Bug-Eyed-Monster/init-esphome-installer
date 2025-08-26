@@ -3,15 +3,10 @@
 
 <div align="center">
   <a href="https://green.bug-eyed.monster/">
-    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Centered Image" width="55%" />
+    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Title Image" width="55%" />
   </a>
   <p><a href="https://green.bug-eyed.monster/">Visit https://green.bug-eyed.monster/</a></p>
 </div>
-
-
-
-[![Visit the site.](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png)]([https://www.youtube.com/watch?v=Cfvlnf9PLuQ](https://green.bug-eyed.monster/))
-
 
 The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks. 
 All configuration is local to any project folder generated, and is thus annulled on folder erasure.
@@ -19,6 +14,12 @@ All configuration is local to any project folder generated, and is thus annulled
 The `install-init-esphome.sh` script downloads and installs the `init-esphome` command. The `init-esphome` script's removal comprises a one file deletion.
 <br>
 <br>
+
+<div align="center">
+  <a href="https://green.bug-eyed.monster/">
+    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/button-demo-loop.gif" alt="Demo Loop" width="80%" />
+  </a>
+</div>
 
 ![Button demo loop.](/images/button-demo-loop.gif)
 <br>
