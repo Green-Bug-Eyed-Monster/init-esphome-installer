@@ -84,7 +84,7 @@ On these Linux releases, it appears to install and run correctly, and is able to
 
 On these Linux releases it fails.
 
--\<reports-please\> ⨯
+- \<reports-please\> ⨯
 
 
 > [!NOTE]
