@@ -2,7 +2,7 @@
 
 # init-esphome command that builds an ESPHome development environment.
 
-# Version: 0.1 - for Python3.11 dependent version of esphome.
+# Version: 0.2 - for Python3.11 dependent version of esphome.
 
 # Copyright © 2025 Green.Bug-Eyed.Monster
 
