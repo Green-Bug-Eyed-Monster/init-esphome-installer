@@ -34,6 +34,24 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 
 <br>
 
+### Audience
+> [!WARNING]
+> This is beta software under development, and may not work for you.
+> 
+> On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
+>
+>- **Ubuntu 22.04 ✓**
+>- **Ubuntu 24.04 ✓**
+>- **\<reports-please\> ✓**  - via 👽 https://green.bug-eyed.monster/
+>
+>On these Linux releases, it fails any of the above.
+>
+>- **Ubuntu 25.04 ⨯**    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._ _Ubuntu 25.05 (codename: plucky) is too new, and the Deadsnakes PPA has not added support for it yet._ _Deadsnakes usually supports LTS releases like 22.05/24.04 (**Wait for Ubuntu 26.04 LTS**)._
+>- **\<reports-please\> ⨯**  - via 👽 https://green.bug-eyed.monster/
+>
+
+<br>
+
 ### Prerequisites
 The version of Python3 needed to run ESPHome may change over time. Check the installation guide to see which specific Python3 version you'll need to run ESPHome. 
 ([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
@@ -95,20 +113,6 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 > This is fully open-source software, made freely available for inspection.
 > If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script before running the installer, along with your copy of ~/.local/bin/[`init-esphome`](./init-esphome) after it's installed.
 
-> [!WARNING]
-> This is beta software under development, and may not work for you.
-> 
-> On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
->
->- **Ubuntu 22.04 ✓**
->- **Ubuntu 24.04 ✓**
->- **\<reports-please\> ✓**  - via 👽 https://green.bug-eyed.monster/
->
->On these Linux releases, it fails any of the above.
->
->- **Ubuntu 25.04 ⨯**    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._ _Ubuntu 25.05 (codename: plucky) is too new, and the Deadsnakes PPA has not added support for it yet._ _Deadsnakes usually supports LTS releases like 22.05/24.04 (**Wait for Ubuntu 26.04 LTS**)._
->- **\<reports-please\> ⨯**  - via 👽 https://green.bug-eyed.monster/
->
 <br>
 
 ### Use
