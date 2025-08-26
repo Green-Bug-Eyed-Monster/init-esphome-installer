@@ -2,8 +2,8 @@
 ## Repository for the init-esphome command and install-init-esphome.sh command installer.
 
 <div align="center">
-  <a href="[https://example.com](https://green.bug-eyed.monster/)">
-    <img src="[https://example.com/image.png](https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png)" alt="Centered Image" width="200" />
+  <a href="https://green.bug-eyed.monster/">
+    <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Centered Image" width="200" />
   </a>
   <p><a href="https://example.com">Caption or description</a></p>
 </div>
