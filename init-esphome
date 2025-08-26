@@ -761,8 +761,7 @@ cat > documents/README.md <<'EOF'
   </a>
 </p>
 
-This folder was generated with the `init-esphome` script, which creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks.
-
+This folder was generated with the [init-esphome](https://github.com/Green-Bug-Eyed-Monster/) script, which creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks.
 - [Task Buttons](#task-buttons)
 - [Known issues](#known-issues)
 
