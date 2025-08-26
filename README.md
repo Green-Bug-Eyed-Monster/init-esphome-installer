@@ -88,7 +88,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 >
 >On these Linux releases, it fails any of these.
 >
->- Ubuntu 25.04 ⨯    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._
+>- Ubuntu 25.04 ⨯    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._ _Ubuntu 25.05 (codename: plucky) is too new, and the Deadsnakes PPA has not added support for it yet._
 >- \<reports-please\> ⨯
 >
 <br>
