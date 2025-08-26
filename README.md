@@ -5,7 +5,7 @@
   <a href="https://green.bug-eyed.monster/">
     <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-monster.png" alt="Title Image" width="55%" />
   </a>
-  <p><a href="https://green.bug-eyed.monster/">Visit https://green.bug-eyed.monster/</a></p>
+  <p>Please visit <a href="https://green.bug-eyed.monster/">Green Bug-Eyed Monster</a>👽</p>
 </div>
 
 The `init-esphome` script creates project folders, ready-set-up to perform professional IOT node development, using the ESPHome component software framework, on Linux. It adds Visual Studio Code tasks and task buttons, which provide convenient shortcuts for common development tasks. 
