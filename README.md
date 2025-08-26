@@ -77,7 +77,8 @@ To install the `init-esphome` command script in your ~/.local/bin folder, possib
 curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome-installer/refs/heads/main/install-init-esphome.sh | bash
 ```
 > [!WARNING]
-> This is beta software under development, and may not work for you. 
+> This is beta software under development, and may not work for you.
+> 
 > On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
 >
 >- Ubuntu 22.04 ✓
