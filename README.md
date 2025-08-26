@@ -78,7 +78,7 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 ```
 > [!WARNING]
 > This is beta software under development, and may not work for you. 
->On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
+> On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
 >
 >- Ubuntu 22.04 ✓
 >- Ubuntu 24.04 ✓
