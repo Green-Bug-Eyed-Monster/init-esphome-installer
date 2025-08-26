@@ -82,13 +82,13 @@ curl -fsSL https://raw.githubusercontent.com/Green-Bug-Eyed-Monster/init-esphome
 > 
 > On these Linux releases, it appears to install and run correctly, and is able to be deleted without ill effect.
 >
->- Ubuntu 22.04 ✓
->- Ubuntu 24.04 ✓
+>- **Ubuntu 22.04 ✓**
+>- **Ubuntu 24.04 ✓**
 >- \<reports-please\> ✓
 >
 >On these Linux releases, it fails any of these.
 >
->- Ubuntu 25.04 ⨯    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._ _Ubuntu 25.05 (codename: plucky) is too new, and the Deadsnakes PPA has not added support for it yet._ _Deadsnakes usually supports LTS releases like 22.05/24.04. Wait for 26.04 LTS._
+>- **Ubuntu 25.04 ⨯**    - _Error: The repository 'https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu plucky Release' does not have a Release file._ _Ubuntu 25.05 (codename: plucky) is too new, and the Deadsnakes PPA has not added support for it yet._ _Deadsnakes usually supports LTS releases like 22.05/24.04. Wait for 26.04 LTS._
 >- \<reports-please\> ⨯
 >
 <br>
