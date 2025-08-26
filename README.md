@@ -36,7 +36,7 @@ sudo apt update -y
 sudo apt install -y python3.11 python3-venv python3.11-venv python3-pip
 sudo apt install -y git curl
 ```
-You now have all the Python 3.11 prerequisites.
+You now have all the Python3.11 prerequisites.
 <br>
 <br>
 
