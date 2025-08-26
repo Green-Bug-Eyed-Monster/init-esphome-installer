@@ -89,7 +89,7 @@ On these Linux releases it fails.
 
 > [!NOTE]
 > This is fully open-source software, made freely available for inspection.
-> If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script before running the installer, along with your copy of [`init-esphome`](./init-esphome) after it's installed.
+> If you have security concerns, please review both the [`install-init-esphome.sh`](./install-init-esphome.sh) installer and the [`init-esphome`](./init-esphome) development environment setup script before running the installer, along with your copy of ~/.local/bin/[`init-esphome`](./init-esphome) after it's installed.
 <br>
 
 ### Use
