@@ -24,7 +24,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 <br>
 
 <div align="center">
-  <h2>⭐ init-esphome is featured in:</h2>
+  <h3>⭐ init-esphome is featured in:</h2>
   <a href="https://www.youtube.com/watch?v=Cfvlnf9PLuQ">
     <img src="https://github.com/Green-Bug-Eyed-Monster/init-esphome-installer/blob/main/images/title-page-small.png" alt="Video Image" width="60%" />
   </a>
