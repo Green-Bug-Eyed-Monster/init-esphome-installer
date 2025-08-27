@@ -67,7 +67,7 @@ cd "$TARGET_DIR"
 echo "Initialising ESPHome environment in: $TARGET_DIR"
 
 # Clean-up to allow re-initialisation of a previously populated directory.
-for file in boiler-plate.yaml secrets-form.yaml documents/README.md; do
+for file in boiler-plate.yaml secrets.yaml documents/README.md; do
     if [ -f "$file" ]; then
         rm -f "$file"
     fi
@@ -504,10 +504,9 @@ echo "boiler-plate.yaml written."
 
 
 
-# Write to secrets-form.yaml
+# Write to secrets.yaml
 
-cat > secrets-form.yaml <<'EOF'
-# ===================================================================
+cat > secrets.yaml <<'EOF'
 # ESPHome Secrets Template
 #
 # This file is a template for your 'secrets.yaml' file. It allows you
@@ -515,10 +514,9 @@ cat > secrets-form.yaml <<'EOF'
 # from your main configuration files.
 #
 # How to use this file:
-# 1. Make a copy of this file and rename it to 'secrets.yaml'.
-#    It should be in the same directory as your ESPHome YAML files.
-# 2. Replace the placeholder values (e.g., "<wifi_network_name>") with your
-#    actual credentials and settings.
+# 1. Replace the placeholder values (e.g., "<wifi_network_name>") 
+#    with your actual credentials and settings.
+# 2. Save the file in the same directory as your ESPHome YAML files.
 # 3. **IMPORTANT**: Do NOT commit your 'secrets.yaml' file to public
 #    version control systems like GitHub. Add 'secrets.yaml' to your
 #    .gitignore file to prevent accidentally sharing your credentials.
@@ -560,12 +558,9 @@ mqtt_broker: "<mqtt_broker_hostname>"
 mqtt_username: "<mqtt_broker_username>"
 # The password for your MQTT broker.
 mqtt_password: "<mqtt_broker_password>"
-
 EOF
 
-chmod a-w secrets-form.yaml    # Make file read-only
-
-echo "secrets-form.yaml written."
+echo "secrets.yaml written."
 
 
 
