@@ -85,7 +85,7 @@ You now have all the Python3 prerequisites.
 
 **Install Microsoft Visual Studio Code**
 
-If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
+If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it for 22.04, or install the snap for 24.04.
 <br>
 <br>
 
