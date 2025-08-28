@@ -69,7 +69,7 @@ sudo apt install -y python3.12 python3-venv python3.12-venv python3-pip
 sudo apt install -y git curl
 ```
 <br>
-
+ 
 **On Ubuntu 24.04 - Add python3.12-venv and update python3.12**
 
 ```
