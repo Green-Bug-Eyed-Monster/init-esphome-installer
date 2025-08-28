@@ -103,7 +103,7 @@ sudo apt install code -y
 ```
 <br>
 
-**On Ubuntu 24.04**
+**Or for Ubuntu 22.04 and Ubuntu 24.04**
 
 ```
 snap install code --classic
