@@ -54,6 +54,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 ### Prerequisites
 Project folders created with this utility, contain an isolated Python3 virtual environment, matched to suit the requirements of ESPHome. This is distinct from any other system-wide Python3 installation. The prototype Python3 version must first be installed, before the isolated 
 Python3 virtual environment can later be automatically created from it. The required version of Python3 is installed, yet not made active. Thus, system-wide Python3 configurations are safely preserved.
+<br>
 
 **On Ubuntu 22.04 - Add python3.12-venv and update/install python3.12**
 
@@ -66,6 +67,7 @@ sudo apt update -y
 sudo apt install -y python3.12 python3-venv python3.12-venv python3-pip
 sudo apt install -y git curl
 ```
+<br>
 
 **On Ubuntu 24.04 - Add python3.12-venv and update python3.12**
 
