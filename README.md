@@ -110,7 +110,7 @@ sudo apt update -y
 sudo apt install -y code
 ```
 <br>
-<br><br>
+<br>
 
 **Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing.**
 ```
