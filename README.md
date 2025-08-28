@@ -82,6 +82,8 @@ You now have all the Python3 prerequisites.
 **Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
+
+*On Ubuntu 22.04*
 ```
 sudo apt update -y
 sudo apt install wget gpg -y
@@ -93,9 +95,10 @@ rm packages.microsoft.gpg
 sudo apt update -y
 sudo apt install code -y
 ```
-> [!NOTE]
-> This works on Ubuntu 22.04, but may yield a broken installation on version 24.04.
-> I skipped the heartache, and just used the App Center to install VS Code on Ubuntu 24.04.
+
+*On Ubuntu 22.04*
+
+Skip the heartache of a likely broken installation on Ubuntu 24.04, and use the App Center to install VS Code.
 <br>
 
 **Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing.**
