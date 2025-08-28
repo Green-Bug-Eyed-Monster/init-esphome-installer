@@ -86,6 +86,7 @@ You now have all the Python3 prerequisites.
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
 <br>
+<br>
 
 *On Ubuntu 22.04*
 ```
