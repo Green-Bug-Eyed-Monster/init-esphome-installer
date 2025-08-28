@@ -81,6 +81,7 @@ sudo apt install -y git curl
 You now have all the Python3 prerequisites.
 <br>
 <br>
+<br>
 
 **Install Microsoft Visual Studio Code**
 
