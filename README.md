@@ -96,7 +96,7 @@ sudo apt install code -y
 
 **Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing.**
 ```
-sudo usermod -a -G dialout <your_username>
+sudo usermod -a -G dialout $USER
 ```
 To effect this change, power-cycle any USB/Serial peripherals, then do a full session logout. You must either reboot, or log right out of Linux, then log back in again.
 <br>
