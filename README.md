@@ -96,7 +96,7 @@ sudo apt update -y
 sudo apt install code -y
 ```
 
-*On Ubuntu 22.04*
+*On Ubuntu 24.04*
 
 Skip the heartache of a likely broken installation on Ubuntu 24.04, and use the App Center to install VS Code.
 <br>
