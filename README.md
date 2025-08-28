@@ -111,7 +111,7 @@ sudo apt install -y code
 ```
 <br>
 
-**Add your username to the dialout group, to gain /dev/ttyX (USB/Serial) device access for flashing.**
+**Add your username to the dialout group, to set /dev/ttyX (USB/Serial) device permission for flashing.**
 ```
 sudo usermod -a -G dialout $USER
 ```
