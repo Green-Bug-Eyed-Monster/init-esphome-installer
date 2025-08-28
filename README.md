@@ -55,6 +55,7 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 Project folders created with this utility, contain an isolated Python3 virtual environment, matched to suit the requirements of ESPHome. This is distinct from any other system-wide Python3 installation. The prototype Python3 version must first be installed, before the isolated 
 Python3 virtual environment can later be automatically created from it. The required version of Python3 is installed, yet not made active. Thus, system-wide Python3 configurations are safely preserved.
 <br>
+<br>
 
 **On Ubuntu 22.04 - Add python3.12-venv and update/install python3.12**
 
@@ -84,6 +85,7 @@ You now have all the Python3 prerequisites.
 **Install Microsoft Visual Studio Code**
 
 If you don't already have Microsoft Visual Studio Code installed, then add the repository and install it.
+<br>
 
 *On Ubuntu 22.04*
 ```
@@ -97,6 +99,7 @@ rm packages.microsoft.gpg
 sudo apt update -y
 sudo apt install code -y
 ```
+<br>
 
 *On Ubuntu 24.04*
 
