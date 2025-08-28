@@ -539,8 +539,11 @@ fallback_hotspot_password: "<simple_hotspot_password>"
 
 # --- Over-The-Air (OTA) Update Password ---
 # A password to secure wireless firmware updates.
-# This is HIGHLY RECOMMENDED to prevent unauthorized access to your device.
-# Choose a strong, unique password.
+# ESPHome allows you to use either a plain-text password, or it's 
+# 32-character MD5 hash.
+# This is HIGHLY RECOMMENDED to prevent unauthorised access to your device.
+# You can generate a MD5 hash of your password using the command:
+#   echo -n "<a_strong_ota_password>" | md5sum
 ota_password: "<a_strong_ota_password>"
 
 # --- Native Home Assistant API (Optional but Recommended) ---
