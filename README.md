@@ -89,7 +89,7 @@ If you don't already have Microsoft Visual Studio Code installed, then add the r
 <br>
 <br>
 
-**On Ubuntu 22.04 only**
+**For Ubuntu 22.04 only**
 ```
 sudo apt update -y
 sudo apt install wget gpg -y
