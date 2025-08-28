@@ -52,15 +52,10 @@ The `install-init-esphome.sh` script downloads and installs the `init-esphome` c
 <br>
 
 ### Prerequisites
-The version of Python3 needed to run ESPHome may change over time. Check the installation guide to see which specific Python3 version you'll need to run ESPHome. 
-([https://esphome.io/guides/installing_esphome#linux)](https://esphome.io/guides/installing_esphome#linux)) 
-
-At the time of writing, ESPHome required **Python3.11**.
-
 Project folders created with this utility, contain an isolated Python3 virtual environment, matched to suit the requirements of ESPHome. This is distinct from any other system-wide Python3 installation. The prototype Python3 version must first be installed, before the isolated 
 Python3 virtual environment can later be automatically created from it. The required version of Python3 is installed, yet not made active. Thus, system-wide Python3 configurations are safely preserved.
 
-**Add python3.11-venv and update/install python3.11**
+**On Ubuntu 22.04 - Add python3.12-venv and update/install python3.12**
 
 ```
 sudo apt update -y
@@ -68,10 +63,19 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository -y universe
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt update -y
-sudo apt install -y python3.11 python3-venv python3.11-venv python3-pip
+sudo apt install -y python3.12 python3-venv python3.12-venv python3-pip
 sudo apt install -y git curl
 ```
-You now have all the Python3.11 prerequisites.
+
+**On Ubuntu 24.04 - Add python3.12-venv and update python3.12**
+
+```
+sudo apt update -y
+sudo apt install -y python3.12 python3-venv python3.12-venv python3-pip
+sudo apt install -y git curl
+```
+
+You now have all the Python3 prerequisites.
 <br>
 <br>
 
