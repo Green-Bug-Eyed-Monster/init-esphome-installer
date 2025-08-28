@@ -88,7 +88,7 @@ If you don't already have Microsoft Visual Studio Code installed, then add the r
 <br>
 <br>
 
-*On Ubuntu 22.04*
+**On Ubuntu 22.04**
 ```
 sudo apt update -y
 sudo apt install wget gpg -y
@@ -102,7 +102,7 @@ sudo apt install code -y
 ```
 <br>
 
-*On Ubuntu 24.04*
+**On Ubuntu 24.04**
 
 Skip the heartache of a likely broken installation on Ubuntu 24.04, and use the App Center to install VS Code.
 <br>
