@@ -106,8 +106,7 @@ sudo apt install code -y
 **On Ubuntu 24.04**
 
 ```
-sudo apt update -y
-sudo apt install -y code
+snap install code --classic
 ```
 <br>
 
