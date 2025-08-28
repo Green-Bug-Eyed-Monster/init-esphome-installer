@@ -2,7 +2,7 @@
 
 # init-esphome command that builds an ESPHome development environment.
 
-# Version: 0.2 - for Python3.11 dependent version of esphome.
+# Version: 0.3 - for Python3.12 dependent version of esphome.
 
 # Copyright © 2025 Green.Bug-Eyed.Monster
 
@@ -37,7 +37,7 @@
 set -e
 
 # Check for required packages
-REQUIRED_PACKAGES=("python3.11" "python3.11-venv")
+REQUIRED_PACKAGES=("python3.12" "python3.12-venv")
 
 for pkg in "${REQUIRED_PACKAGES[@]}"; do
     if ! dpkg -s "$pkg" &> /dev/null; then
@@ -77,7 +77,7 @@ done
 mkdir -p documents icons hardware common PlatformIO
 
 # Set up Python virtual environment
-python3.11 -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
 
 # Install ESPHome and dependencies
@@ -946,4 +946,4 @@ source ~/.bashrc
 
 # Open project folder in Visual Studio Code
 
-code . boiler-plate.yaml secrets-form.yaml common/testing-config.yaml
+code . boiler-plate.yaml secrets.yaml common/testing-config.yaml
