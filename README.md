@@ -132,6 +132,7 @@ rm ~/.local/bin/init-esphome
 ```
 The path remains unaltered.[^2]
 <br>
+<br>
 
 ---
 
